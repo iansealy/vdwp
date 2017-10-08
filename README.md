@@ -1,2 +1,2 @@
-# wdux
-WDUX
+# WDUX
+© Birkbeck College, University of London
