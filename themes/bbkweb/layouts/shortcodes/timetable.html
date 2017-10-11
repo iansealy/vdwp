@@ -1,0 +1,6 @@
+<tr>
+    <td scope="row"><a href="/sessions/{{ lower (index $.Page.Site.Params (.Get 0)) }}/">{{ index $.Page.Site.Params (.Get 0) }}</a></td>
+    <td>{{ dateFormat "Monday, Jan 2 2006" (index $.Page.Site.Params (.Get 1)) }}</td>
+    <td>{{ index $.Page.Site.Params (.Get 2) }}</td>
+    <td>{{ index $.Page.Site.Params (.Get 3) }}</td>
+</tr>

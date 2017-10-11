@@ -1,0 +1,5 @@
+<tr>
+    <td scope="row">{{ .Get 0 }}</td>
+    <td>{{ .Get 1 }}</td>
+    <td><a href="http://{{ .Get 1 }}.{{ index $.Page.Site.Params "url" }}/">http://{{ .Get 1 }}.{{ index $.Page.Site.Params "url" }}/</a></td>
+</tr>
