@@ -13,6 +13,7 @@ blackfriday:
 params:
   longyear: "2017/2018"
   shortyear: "1718"
+  shortname: "wdux"
   url: "wdux1718.bbkweb.org"
   session01name: WDUX01
   session01date: "2017-10-14"
