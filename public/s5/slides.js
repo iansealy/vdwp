@@ -197,7 +197,7 @@ function toggle() {
         slides.disabled = false;
         outline.disabled = true;
         s5mode = true;
-        fontScale();
+        //fontScale();
         for (var n = 0; n < smax; n++) {
             var slide = slideColl[n];
             slide.style.visibility = 'hidden';
@@ -536,7 +536,7 @@ function startup() {
     slideLabel();
     fixLinks();
     externalLinks();
-    fontScale();
+    //fontScale();
     if (!isOp) {
         notOperaFix();
         incrementals = createIncrementals();
@@ -551,6 +551,6 @@ function startup() {
 }
 
 window.onload = startup;
-window.onresize = function() {
+/*window.onresize = function() {
     setTimeout('fontScale()', 50);
-}
+}*/
