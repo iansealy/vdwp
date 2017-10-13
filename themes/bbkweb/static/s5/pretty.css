@@ -114,10 +114,11 @@ sup {
 
 .slide ul ul {
     line-height: 1;
+    margin-left: 2%;
 }
 
 .slide ul ul li {
-    margin: .2em;
+    margin: 0.5em 0.2em;
     font-size: 85%;
     list-style: square;
 }
