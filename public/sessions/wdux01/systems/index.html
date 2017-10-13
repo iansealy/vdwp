@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+Introduction To WDD Systems | Web Development and User Experience - Birkbeck, University of London
+</title>
+        <link rel="stylesheet" href="/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+        <link rel="stylesheet" href="/s5/outline.css" type="text/css" media="screen" id="outlineStyle" />
+        <link rel="stylesheet" href="/s5/print.css" type="text/css" media="print" id="slidePrint" />
+        <link rel="stylesheet" href="/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+        <script src="/s5/slides.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="controls"></div>
+            <div id="currentSlide"></div>
+            <div id="header"></div>
+            <div id="footer">
+                <h1>Web Development and User Experience</h1>
+                <h2>Introduction To WDD Systems</h2>
+            </div>
+        </div>
+        <div class="presentation">
+            <div class="slide">
+                <h1>Introduction To WDD Systems</h1>
+                <h2>Ian Sealy</h2>
+            </div>
+            
+<div class="slide">
+    <h1>Introduction</h1>
+    <ul>
+        <li>Everyone has a Birkbeck username and password for accessing computers in Birkbeck</li>
+        <li>You can (and should) <a href="http://www.bbk.ac.uk/birkbeckaccount/" target="_blank">change your password</a></li>
+</li>
+        <li>If you forget your username then a <a href="/students/" target="_blank">list</a> is available</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Network Drives At Birkbeck</h1>
+    <ul>
+        <li>Network drive - N:</li>
+        <li>Can be used for storing files you are currently working on</li>
+        <li>Available on any Birkbeck computer you login on</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>File Extensions</h1>
+    <ul>
+        <li>By default Windows hides file extensions</li>
+        <li><code>football.html</code> and <code>football.htm</code> are different files, but will appear to be the same</li>
+        <li>Need to show all file extensions</li>
+        <li>Method depends on Windows version, but is usually one of:
+            <ul>
+                <li><code>Windows Explorer &gt; Tools &gt; Folder Options &gt; View tab &gt; Uncheck &quot;Hide extensions for known file types&quot;</code></li>
+                <li><code>Windows Explorer &gt; Organize &gt; Folder and search options &gt; View tab &gt; Uncheck &quot;Hide extensions for known file types&quot;</code></li>
+            </ul>
+        </li>
+        <li>You'll want to make this change on your home computer as well as at Birkbeck</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Web Space</h1>
+    <ul>
+        <li>Each student has their own Web space on a DreamHost server</li>
+        <li>Using professional hosting so you can experience real systems</li>
+        <li>A <a href="/students/" target="_blank">list of URLs</a> is available</li>
+        <li>For example, my username is iansealy and my Web space is at <a href="http://iansealy.wdux1718.bbkweb.org/" target="_blank">http://iansealy.wdux1718.bbkweb.org/</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Different Password</h1>
+    <ul>
+        <li>Username is same for Birkbeck and for DreamHost</li>
+        <li>Passwords are different; changing your Birkbeck password will not change your DreamHost password (and vice versa)</li>
+        <li>DreamHost password is changed via a more complicated method</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Changing DreamHost Password</h1>
+    <ul>
+        <li>Run PuTTY</li>
+        <li>In the Host Name box type <code>bbkweb.org</code> and press the Open button</li>
+        <li>When the &quot;<code>login as:</code>&quot; prompt appears, type your username and press Enter</li>
+        <li>Then enter your password and press Enter</li>
+        <li><strong>(Note that you won't get any indication you're typing your password)</strong></li>
+        <li>Then type <code>passwd</code> and then enter your existing password and press Enter</li>
+        <li>Then enter your new password (twice)</li>
+        <li>Finally type <code>exit</code> and press Enter</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>FTP</h1>
+    <ul>
+        <li>Can access DreamHost Web space using FTP (File Transfer Protocol)</li>
+        <li>Allows transfer of files from your local computer (at home or here at Birkbeck) to a remote computer (and vice versa)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Basic Scenario</h1>
+    <ul>
+        <li>All FTP programs are different, but basic scenario is:
+            <ul>
+                <li>Specify computer to connect to</li>
+                <li>Give username and password</li>
+                <li>
+                    Specify files to GET from the remote computer <em>or</em><br />
+                    Specify files on your computer that you want to PUT on the remote computer
+                </li>
+            </ul>
+        </li>
+        <li>The computer you need to FTP to to get at your Birkbeck Web space is called: <code>bbkweb.org</code></li>
+        <li>Web pages need to go in the <code>htdocs</code> directory</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Recommended FTP program</h1>
+    <ul>
+        <li>The FTP client we recommend and use at Birkbeck is <a href="https://filezilla-project.org/" target="_blank">FileZilla</a></li>
+        <li>FileZilla demo</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>FTP</h1>
+    <ul>
+        <li>Create directory called <code>test</code> in <code>htdocs</code> subdirectory of your Web space</li>
+        <li>Go to this directory on the Web by appending <code>test</code> to your personal URL</li>
+        <li>For example, my URL is <a href="http://iansealy.wdux1718.bbkweb.org/" target="_blank">http://iansealy.wdux1718.bbkweb.org/</a></li>
+        <li>Create a text file in your N: drive called <code>yourname.txt</code> and put some text in it</li>
+        <li>FTP this text file to your Web space and put it in the new test directory</li>
+        <li>View via the Web</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Index Documents</h1>
+    <ul>
+        <li>View new <code>test</code> directory on Web</li>
+        <li>Gives directory listing (including new <code>yourname.txt</code> file)</li>
+        <li>Create a file called <code>index.html</code> in Notepad and save it to the N: drive and FTP it to your test directory</li>
+        <li>If a Web browser requests a directory then an index document is sent back to the browser</li>
+        <li>If no index document is present then a directory listing is sent back to the browser OR an error message is displayed</li>
+        <li>Former is the case for DreamHost Web server</li>
+        <li><code>index.html</code> is most common name for an index document, but others are possible, e.g. <code>index.htm</code>, <code>welcome.html</code>, <code>home.html</code>, <code>Default.htm</code></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+            <div class="slide"></div>
+        </div>
+    </body>
+</html>
