@@ -1,0 +1,249 @@
+<!doctype html>
+<html class="no-js" lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+WDUX Systems | Web Development and User Experience - Birkbeck, University of London
+</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="/icon.png">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CUbuntu+Condensed" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <a href="/">
+                    <img src="/img/bbk-logo-burgundy.png" alt="Birkbeck, University of London" />
+                </a>
+                <div id="sitename">Web Development and User Experience</div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/assignment/">Assignment</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/mailing-list/">Mailing List</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/reading-list/">Reading List</a>
+                        </li>
+                        
+                        
+                        
+                        <li class="active">
+                            <a href="/sessions/">Sessions</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/staff/">Staff</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/students/">Students</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h1>
+WDUX Systems
+</h1>
+                
+<p>Each of you has been given a username and password that allows you to access Birkbeck computers. If you forget your username then a list is available on this Web site at:</p>
+
+<ul>
+    <li><a href="http://wdux1718.bbkweb.org/students/">http://wdux1718.bbkweb.org/students/</a></li>
+</ul>
+
+<p>You can change your password at:</p>
+
+<ul>
+    <li><a href="http://www.bbk.ac.uk/birkbeckaccount/">http://www.bbk.ac.uk/birkbeckaccount/</a></li>
+</ul>
+
+<p>You will need your username and password in order to login to the computers at Birkbeck.</p>
+
+<h2>Network Drives</h2>
+
+<p>At Birkbeck you have a network drive, the N: drive. When you're working during a session at Birkbeck, you should save all files in the N: drive. This drive is available on any Birkbeck computer you login on. The contents will stay the same between sessions.
+
+<h2>File Extensions</h2>
+
+<p>By default Windows hides file extensions, but this is annoying for Web development. For example, <code>football.html</code> and <code>football.htm</code> are different files, but will appear to be the same in Windows. So you need to always show all file extensions. The exact method depends on the version of Windows you are using, but is usually either done by opening Windows Explorer and then choosing <code>Tools</code> --&gt; <code>Folder Options</code> --&gt; <code>View</code> tab and then unchecking &quot;<code>Hide extensions for known file types</code>&quot; or by opening Windows Explorer and then choosing <code>Organize</code> --&gt; <code>Folder and search options</code> --&gt; <code>View</code> tab and then unchecking &quot;<code>Hide extensions for known file types</code>&quot;. You'll want to make this change on your home computer as well as at Birkbeck.</p>
+
+<h2>Web Space</h2>
+
+<p>Each student has their own Web site on a DreamHost server. The URLs are all of the form <tt>http://<i>username</i>.wdux1718.bbkweb.org/</tt>. So, for example, the URL of my Web space is:</p>
+
+<ul>
+    <li><a href="http://iansealy.wdux1718.bbkweb.org/">http://iansealy.wdux1718.bbkweb.org/</a></li>
+</ul>
+
+<p>A list of all the URLs is available from:</p>
+
+<ul>
+    <li><a href="http://wdux1718.bbkweb.org/students/">http://wdux1718.bbkweb.org/students/</a></li>
+</ul>
+
+<p>Your username is the same for Birkbeck and for DreamHost, but the passwords are different. You can manually keep them in sync if you wish. Changing your Birkbeck password will not change your DreamHost password (and vice versa). See above for changing your Birkbeck password. Changing your DreamHost password is more complicated and involves logging into a remote DreamHost server. On Windows, this can be done using a program called PuTTY that's installed on the Birkbeck machines and can also be downloaded for free from:</p>
+
+<ul>
+    <li><a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</a></li>
+</ul>
+
+<p>Run PuTTY and then in the Host Name box type <code>bbkweb.org</code> and press the Open button. When the &quot;login as:&quot; prompt appears, type your username and press Enter. Then enter your password and press Enter. (Note that there won't be any indication that you're typing your password in. You just have to assume you are!) You should get logged into the Birkbeck server. Once you've logged in type <tt>passwd</tt> (in lower case) and then, when prompted, enter your existing password and press Enter. Then enter your new password (twice). If the system doesn't accept your new password then you'll need to run <tt>passwd</tt> again and retry. If the system accepts your new password then type <tt>exit</tt> and press Enter.</p>
+
+<p>If you're using a Mac then run Terminal and type <code>ssh <em>username</em>@bbkweb.org</code> (changing <em>username</em> to your DreamHost username). When asked for your password, type it in and press Enter. You should get logged into the Birkbeck server. Once you've logged in type <tt>passwd</tt> (in lower case) and then, when prompted, enter your existing password and press Enter. Then enter your new password (twice). If the system doesn't accept your new password then you'll need to run <tt>passwd</tt> again and retry. If the system accepts your new password then type <tt>exit</tt> and press Enter.</p>
+
+<h2>FTP</h2>
+
+<p>In order to put files on your Web site you will need to upload them to the DreamHost server. This is possible via FTP. FTP stands for File Transfer Protocol and simply allows you to transfer files from one computer to another.</p>
+
+<p>There are scores of different FTP programs available, but they all follow the same basic scenario:</p>
+
+<ul>
+<li>Specify remote computer to connect to</li>
+<li>Give username and password</li>
+<li>Either specify files to GET from the remote computer or PUT files from the local computer onto the remote computer</li>
+</ul>
+
+<p>For accessing your DreamHost Web space, the computer you want to connect to is:</p>
+
+<ul>
+    <li><code>bbkweb.org</code></li>
+</ul>
+
+<p>You'll then need to login using your DreamHost username and password. Once you've been authenticated you'll be able to either GET files from the remote computer (the DreamHost Web server) or PUT files from your computer onto the DreamHost Web server.</p>
+
+<h3>FTP Clients</h3>
+
+<p>In order to access your Web space via FTP, you'll need an FTP client. We recommend you install <a href="http://filezilla.sourceforge.net/">FileZilla</a>, which should also be on the Birkbeck computers. The current version, for Windows and Macs, can be downloaded from:</p>
+
+<ul>
+    <li><a href="http://filezilla-project.org/download.php?type=client">http://filezilla-project.org/download.php?type=client</a></li>
+</ul>
+
+<p>After you've downloaded FileZilla, you can install it by simply double clicking on it. On the first screen is a License Agreement, which you should agree to. The default options on the next few screens are all OK and you can just accept them.</p>
+
+<p>Once FileZilla is installed, you can run FileZilla by choosing it from the Start menu. The FileZilla window is split into two main panes. The left-hand pane shows the files on your local computer. The right-hand pane shows the files in a directory on the remote computer. Since you haven't yet connected to a remote computer, the right-hand pane will be blank. Above these two main panes is a pane showing connection information and below is a pane showing the details of current transfers. Both of these panes will currently be blank. The simplest way to use FileZilla is to fill in three of the boxes at the top of the screen. In the &quot;Host&quot; box you should enter:
+
+<ul>
+    <li><code>bbkweb.org</code></li>
+</ul>
+
+<p>In the &quot;User&quot; box you should enter your DreamHost username. If you forget your username then a list is available on the course Web site at:</p>
+
+<ul>
+    <li><a href="http://wdux1718.bbkweb.org/students/">http://wdux1718.bbkweb.org/students/</a></li>
+</ul>
+
+<p>In the &quot;Password&quot; box you should enter your DreamHost password. Finally you click on the &quot;Quickconnect&quot; button. You should then connect to the DreamHost server and the files in your Web space will be visible in the right-hand pane of the FileZilla window.</p>
+
+<p>If you want to transfer a file from your computer to the Web server then you should navigate to that file in the left-hand pane and then drag and drop it into the right-hand pane.</p>
+
+<p>If you want to transfer a file from the Web server to your PC so that you can work on it then you follow the same procedure but in reverse. You should navigate to the file in the right-hand pane and then drag and drop it to the left-hand pane.</p>
+
+<h2>HTML Editors</h2>
+
+<p>The HTML editor we recommend using is Brackets and it is available for download, for Windows and Macs, from:</p>
+
+<ul>
+    <li><a href="http://brackets.io/">http://brackets.io/</a></li>
+</ul>
+
+
+<h2>Web Site Structure</h2>
+
+<p>Any files that I upload to the <code>htdocs</code> directory of my Web space will be visible on the Web. For example, if I FTP a file called <code>ian.html</code> to the <code>htdocs</code> directory then I will be able to view this file on the Web by appending the name of the file to my base URL and going to:</p>
+
+<ul>
+    <li>http://iansealy.wdux1718.bbkweb.org/ian.html</li>
+</ul>
+
+<p>If I create a subdirectory in <code>htdocs</code> called <code>birkbeck</code> and put a file in that directory called <code>kieren.html</code> then that file will be visible on the Web at:</p>
+
+<ul>
+    <li>http://iansealy.wdux1718.bbkweb.org/birkbeck/kieren.html</li>
+</ul>
+
+<p>That is, I have appended the directory (<code>birkbeck</code>) and the name of the file (<code>kieren.html</code>) to my base URL (http://iansealy.wdux1718.bbkweb.org/). Each component of the URL is separated with a forward slash.</p>
+
+<p>If I create a subdirectory of <code>birkbeck</code> called <code>college</code> then the URL of that directory will be:</p>
+
+<ul>
+    <li>http://iansealy.wdux1718.bbkweb.org/birkbeck/college/</li>
+</ul>
+
+<h2>Index Documents</h2>
+
+<p>If I were to put a file called <code>index.html</code> in the <code>birkbeck/college</code> directory then instead of seeing a default directory listing when I went to:</p>
+
+<ul>
+    <li>http://iansealy.wdux1718.bbkweb.org/birkbeck/college/</li>
+</ul>
+
+<p>I would instead see the contents of the <code>index.html</code> document.</p>
+
+<p>The <code>index.html</code> file is just an ordinary file and, in fact, it can be viewed normally. The following two URLs would produce exactly the same page:</p>
+
+<ul>
+    <li>http://iansealy.wdux1718.bbkweb.org/birkbeck/college/</li>
+    <li>http://iansealy.wdux1718.bbkweb.org/birkbeck/college/index.html</li>
+</ul>
+
+<p>The DreamHost Web server is configured so that if no index document is present then a directory listing is shown instead. This doesn't have to be the case and Web servers can be configured so that an error message is shown instead. An example of this can be seen at:</p>
+
+<ul>
+    <li><a href="http://www.amentsoc.org/ssi/">http://www.amentsoc.org/ssi/</a></li>
+</ul>
+
+<p>An index document doesn't have to be called <code>index.html</code>, although this is the most common. Other examples are <code>index.htm</code>, <code>welcome.html</code>, <code>home.html</code> and <code>Default.htm</code>. The latter is commonly used on Windows-based Web servers.</p>
+
+<p>For another explanation of index documents, have a look at:
+
+<ul>
+    <li><a href="http://webdesign.about.com/od/beginningtutorials/f/index_html.htm">http://webdesign.about.com/od/beginningtutorials/f/index_html.htm</a></li>
+</ul>
+
+
+            </main>
+        </div>
+        <footer>
+            <ul>
+                <li>&copy; Birkbeck, University of London 2017/2018</li>
+                <li>Hosted by <a href="http://www.dreamhost.com/r.cgi?77128">DreamHost</a></li>
+            </ul>
+        </footer>
+        <script src="/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
