@@ -170,10 +170,13 @@ WDUX01
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-108227869-1','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108227869-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108227869-1');
+</script>
+
     </body>
 </html>
