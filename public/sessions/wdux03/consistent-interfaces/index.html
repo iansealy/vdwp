@@ -29,133 +29,130 @@ Consistent User Interfaces | Web Development and User Experience - Birkbeck, Uni
             </div>
             
 <div class="slide">
-  <h1>Importance</h1>
-  <ul>
-    <li>A consistent user interface is one where all the navigational tools are in a similar place on every page of a site and where all the pages have a similar look and feel</li>
-    <li>A consistent user interface allows users to complete their task more quickly and easily</li>
-    <li>An inconsistent or deficient user interface confuses users (&quot;Am I still on the same site?&quot;), looks unprofessional and may force them to leave
+    <h1>Importance</h1>
     <ul>
-      <li><a href="http://www.bath.ac.uk/" target="_blank">University of Bath</a></li>
+        <li>A consistent user interface is one where all the navigational tools are in a similar place on every page of a site and where all the pages have a similar look and feel</li>
+        <li>A consistent user interface allows users to complete their task more quickly and easily</li>
+        <li>
+            An inconsistent or deficient user interface confuses users (&quot;Am I still on the same site?&quot;), looks unprofessional and may force them to leave
+            <ul>
+                <li><a href="http://www.bath.ac.uk/" target="_blank">University of Bath</a></li>
+            </ul>
+        </li>
+        <li>Main difference between professional and amateur sites</li>
+        <li>A user interface must be planned and requires knowledge of all the content and possible content of the site</li>
     </ul>
-    </li>
-    <li>Main difference between professional and amateur sites</li>
-    <li>A user interface must be planned and requires knowledge of all the content and possible content of the site</li>
-  </ul>
-<div class="handout"></div>
+    <div class="handout"></div>
 </div>
 
 <div class="slide">
-  <h1>Creating a nav bar in CSS</h1>
-  <ul>
-    <li>Nav bars (and footers) are essentially unordered lists of links</li>
-    <li>Default rendering is for list items to stack vertically. For example:</li>
-  </ul>
-  <pre>
-  &lt;ul id=&quot;nav&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sport&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Shop&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  </pre>
-<div class="handout"></div>
+    <h1>Creating a nav bar in CSS</h1>
+    <ul>
+        <li>Nav bars (and footers) are essentially unordered lists of links</li>
+        <li>
+            Default rendering is for list items to stack vertically. For example:
+<pre>
+&lt;ul id=&quot;nav&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sport&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Shop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        </li>
+    </ul>
+    <div class="handout"></div>
 </div>
 
-
 <div class="slide">
-  <h1>Creating a nav bar in CSS - 2</h1>
-  <ul>
-    <li>Use: <code>display: inline</code> to get the list items on one line:</li>
-  </ul>
-  <pre>
-    ul#nav li {
-      display:inline;
-    }
-  </pre>
-
-  <ul id="nav2">
-    <li style="display:inline;"><a href="#">About</a></li>
-    <li style="display:inline;"><a href="#">News</a></li>
-    <li style="display:inline;"><a href="#">Sport</a></li>
-    <li style="display:inline;"><a href="#">Shop</a></li>
-  </ul>
-  <div class="handout"></div>
+    <h1>Creating a nav bar in CSS - 2</h1>
+    <ul>
+        <li>
+            Use: <code>display: inline</code> to get the list items on one line:
+<pre>
+ul#nav li {
+    display:inline;
+}
+</pre>
+        </li>
+    </ul>
+    <ul>
+        <li style="display:inline;"><a href="#">About</a></li>
+        <li style="display:inline;"><a href="#">News</a></li>
+        <li style="display:inline;"><a href="#">Sport</a></li>
+        <li style="display:inline;"><a href="#">Shop</a></li>
+    </ul>
+    <div class="handout"></div>
 </div>
 
-
 <div class="slide">
-  <h1>Creating a nav bar in CSS - 3</h1>
-  <ul>
-    <li>Now we can add some colour and padding:</li>
-  </ul>
-
-  <pre>
-  ul#nav li {
+    <h1>Creating a nav bar in CSS - 3</h1>
+    <ul>
+        <li>
+            Now we can add some colour and padding:
+<pre>
+ul#nav li {
     display:inline;
     list-style-type: none;
     margin : 0;
     padding:0;
-  }
+}
 
-  ul#nav li a {
+ul#nav li a {
     float: left;
     background-color : #BDDEFF;
     text-decoration: none;
     color: #000000;
     margin:0;
     padding : 6px 20px 6px 20px;
-  }
-
-  ul#nav li a:hover {
-    background-color : #566B80;
-    text-decoration: underline;
-    color: #ffffff;
-  }
-  </pre>
-
-  <style>
-ul#nav {
-  padding : 0;
-}
-
-ul#nav li {
-  display:inline; list-style-type: none; margin : 0; padding:0;
-}
-
-ul#nav li a {
-  float: left;
-  background-color : #BDDEFF;
-  text-decoration: none;
-  color: #000000;
-  margin:0;
-  padding : 6px 20px 6px 20px;
 }
 
 ul#nav li a:hover {
-  background-color : #566B80;
-  text-decoration: underline;
-  color: #ffffff;
+    background-color : #566B80;
+    text-decoration: underline;
+    color: #ffffff;
+}
+</pre>
+<style>
+ul#nav {
+    padding : 0;
 }
 
-</style>
+ul#nav li {
+    display:inline; list-style-type: none; margin : 0; padding:0;
+}
 
-  <ul id="nav">
-    <li><a href="#">About</a></li>
-    <li><a href="#">News</a></li>
-    <li><a href="#">Sport</a></li>
-    <li><a href="#">Shop</a></li>
-  </ul>
-  <div class="handout"></div>
+ul#nav li a {
+    float: left;
+    background-color : #BDDEFF;
+    text-decoration: none;
+    color: #000000;
+    margin:0;
+    padding : 6px 20px 6px 20px;
+}
+
+ul#nav li a:hover {
+    background-color : #566B80;
+    text-decoration: underline;
+    color: #ffffff;
+}
+</style>
+    <ul id="nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Sport</a></li>
+        <li><a href="#">Shop</a></li>
+    </ul>
+    <div class="handout"></div>
 </div>
 
 <div class="slide">
-  <h1>Listamatic</h1>
-  <ul>
-    <li><a href="http://css.maxdesign.com.au/index.htm" target="_blank">Listamatic</a> provides code examples for many different types/designs of navigation using lists.</li>
-    <li>Remember to cite your sources in your assignment if you use Listamatic.</li>
-  </ul>
-
-  <div class="handout"></div>
+    <h1>Listamatic</h1>
+    <ul>
+        <li><a href="http://css.maxdesign.com.au/index.htm" target="_blank">Listamatic</a> provides code examples for many different types/designs of navigation using lists</li>
+        <li>Remember to cite your sources in your assignment if you use Listamatic</li>
+    </ul>
+    <div class="handout"></div>
 </div>
 
 
