@@ -1,0 +1,362 @@
+---
+title: "CSS"
+date: 2017-10-13T10:23:41+01:00
+draft: false
+type: slides
+presenter: "Ian Sealy"
+---
+
+<div class="slide">
+    <h1>HTML Problems</h1>
+    <p>Problems with HTML and their workarounds:</p>
+    <ul>
+        <li>
+            Formatting:
+            <ul>
+                <li><code>font</code> tag</li>
+            </ul>
+        </li>
+        <li>
+            Positioning / Layout:
+            <ul>
+                <li>Tables</li>
+                <li>Content as image (e.g. <a href="http://www.roverp6cars.com/aboutus.html" target="_blank">http://www.roverp6cars.com/aboutus.html</a>)</li>
+                <li><code>blockquote</code></li>
+                <li><code>&lt;p&gt;&amp;nbsp;&lt;/p&gt;</code></li>
+                <li><code>&lt;br&gt;&lt;br&gt;</code></li>
+                <li>Spacers (transparent single pixel image)</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Transparent Single Pixel Image</h1>
+    <p>This is some text without a margin to the left of it.</p>
+    <img src="spacer.gif" width="50" height="150" align="left" alt="" />
+    <p>This is some text with a margin to the left of it. The margin is a transparent single pixel image expanded to 50 pixels.</p>
+    <br clear="all" />
+    <img src="red.gif" width="50" height="150" align="left" alt="" />
+    <p>This is some text with a margin to the left of it. The image is now a single pixel red image, so you can see it.</p>
+    <br clear="all" />
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Workaround Problems</h1>
+    <p>Problems with pages that use workarounds:</p>
+    <ul>
+        <li>Pages are larger (especially if images are used) and take longer to download</li>
+        <li>
+            Pages are harder to maintain because:
+            <ul>
+                <li>the content is more complex</li>
+                <li>the content is harder to read</li>
+                <li>changing the style of a set of pages involves altering every page and often each individual tag (e.g. if want to change <code>&lt;font color=&quot;green&quot;&gt;</code> to <code>&lt;font color=&quot;red&quot;&gt;</code>)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Both of these mean users waste time and so do authors. Much better to separate the content and the styling. Authors can concentrate on the content and designers can easily change the design.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Cascading Stylesheets</h1>
+    <p>Cascading Stylesheets (CSS or just stylesheets) allow content to be separated from formatting</p>
+    <p>Examples of sites that use CSS page formatting are myriad, but:</p>
+    <ul>
+        <li><a href="http://www.espn.com/" target="_blank">http://www.espn.com/</a></li>
+        <li><a href="http://www.theguardian.com/" target="_blank">http://www.theguardian.com/</a></li>
+        <li><a href="http://www.csszengarden.com/" target="_blank">http://www.csszengarden.com/</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Simple Example</h1>
+    <p><code>&lt;style type=&quot;text/css&quot;&gt;<br />
+    body { color: red; }<br />
+    &lt;/style&gt;</code></p>
+    <p>CSS is the bit between the <code>&lt;style&gt;</code> tags</p>
+    <p><code>&lt;style&gt;</code> tag must go in head of page (like the <code>&lt;title&gt;</code> tag).</p>
+    <p>All text content (everything within the body tags) is red.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Syntax</h1>
+    <p><code>body { color: red; }</code></p>
+    <p>Part before the curly brackets (in this case the body tag) is the <strong>selector</strong>. Part within the curly brackets is the <strong>declaration</strong>.</p>
+    <p>Each declaration consists of a <strong>property name</strong> (in this case color) and its <strong>value</strong> (in this case red). The name and value must be separated with a colon.</p>
+    <p>Can have more than one selector, for example:<br /><code>h1, h2 { color: red; }</code></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More Syntax</h1>
+    <p>Can have more than one property, for example:<br /><code>body { color: red; background-color: green; }</code></p>
+    <p>Properties must be separated with semi-colons.</p>
+    <p>A stylesheet is just a collection of these rules.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Location of Styles</h1>
+    <ul>
+        <li>
+            <strong>Internal stylesheet</strong><br />
+            <code>&lt;style&gt;</code> tag appears in head of document.
+        </li>
+        <li>
+            <strong>External stylesheet</strong><br />
+            A .css file contains the styles. Use this with:<br />
+            <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;</code><br />
+            Goes in the head of document.<br />
+            File just contains CSS (no HTML, so no <code>&lt;style&gt;</code> tag).
+        </li>
+        <li>
+            <strong>Inline styles</strong><br />
+            Within a single HTML tag.<br />
+            <code>&lt;p style=&quot;color: blue;&quot;&gt;</code>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Classes</h1>
+    <p>Styles can be applied to any HTML tags, but what if you want some <code>h1</code> tags to have one style, but other <code>h1</code> tags to have another style?</p>
+    <p>Use classes. Can define different classes of style. For example:</p>
+    <p>
+        <code>h1.warning { color: red; }<br />
+    h1.ok { color: green; }</code>
+    </p>
+    <p>Apply specific class to h1 tags:</p>
+    <p>
+        <code>&lt;h1 class=&quot;warning&quot;&gt;Red / Warning Heading&lt;/h1&gt;<br />
+        &lt;h1 class=&quot;ok&quot;&gt;Green / OK Heading&lt;/h1&gt;</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More Classes</h1>
+    <p>Don't have to associate classes with a specific tag, for example:</p>
+    <p><code>h1.yuk { color: red; background-color: green; }</code></p>
+    <p>
+        <code>&lt;h1 class=&quot;yuk&quot;&gt;Horrid style&lt;/h1&gt;<br />
+        &lt;p class=&quot;yuk&quot;&gt;Normal style&lt;/p&gt;</code>
+    </p>
+    <p><code>.yuk { color: red; background-color: green; }</code></p>
+    <p>
+        <code>&lt;h1 class=&quot;yuk&quot;&gt;Horrid style&lt;/h1&gt;<br />
+        &lt;p class=&quot;yuk&quot;&gt;Horrid style&lt;/p&gt;</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>IDs</h1>
+    <p>IDs are similar to classes, except the syntax is different (a hash rather than a full stop).</p>
+    <p>
+        <code>#warning { color: red; }<br />
+        #ok { color: green; }</code>
+    </p>
+    <p>Apply specific id to h1 tags:</p>
+    <p>
+        <code>&lt;h1 id=&quot;warning&quot;&gt;Red / Warning Heading&lt;/h1&gt;<br />
+        &lt;h1 id=&quot;ok&quot;&gt;Green / OK Heading&lt;/h1&gt;</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More IDs</h1>
+    <p>Each id must be unique on a page, whereas the same class can appear multiple times.</p>
+    <p>
+        Can never have:<br />
+        <code>&lt;p id=&quot;intro&quot;&gt;First Paragraph&lt;/p&gt;<br />
+        &lt;p id=&quot;intro&quot;&gt;Second Paragraph&lt;/p&gt;</code>
+    </p>
+    <p>
+        But can have:<br />
+        <code>&lt;p class=&quot;intro&quot;&gt;First Paragraph&lt;/p&gt;<br />
+        &lt;p class=&quot;intro&quot;&gt;Second Paragraph&lt;/p&gt;</code>
+    </p>
+    <p>IDs are widely used in CSS positioning as they're used to specifically identify an area of the page.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Comments</h1>
+    <p>Can add comments to stylesheets using <code>/*</code> and <code>*/</code>. For example:</p>
+    <p>
+        <code>h1 { color: red; } /* Make headings red */<br />
+        p { color: blue; } /* Make paragraphs blue */</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Stylesheet Precedence</h1>
+    <p>What if an inline style says that paragraphs should be blue, but an external stylesheet says they should be green?</p>
+    <p>Styles have an order of precedence:</p>
+    <ul>
+        <li>Inline styles</li>
+        <li>Embedded styles</li>
+        <li>Linked styles</li>
+        <li>Default browser styles</li>
+    </ul>
+    <p>So an inline style overrides an external style.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Font Properties</h1>
+    <ul>
+        <li>
+            <strong>Named fonts</strong><br />
+            <code>p { font-family: Verdana, Helvetica, sans-serif; } /* Go from specific to generic font */</code>
+        </li>
+        <li>
+            <strong>Font size</strong><br />
+            <code>p { font-size: 16pt; }</code><br />
+            Can define size using points (e.g. 16pt), percent (e.g. 150% or 1.5 times larger than the default), ems (e.g. 1.5em or 1.5 times larger than the current default), pixels (e.g. 30px), etc...<br />
+            Recommend percent or ems and <strong>not</strong> points or pixels
+        </li>
+        <li>
+            <strong>Font style</strong><br />
+            <code>p { font-style: italic; }</code>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More Font Properties</h1>
+    <ul>
+        <li>
+            <strong>Font weight</strong><br />
+            <code>p { font-weight: bold; }<br />
+            p { font-weight: normal; }</code>
+        </li>
+        <li>
+            <strong>Text transform</strong><br />
+            <code>p { text-transform: uppercase; }<br />
+            p { text-transform: lowercase; }<br />
+            p { text-transform: capitalize; }</code>
+        </li>
+        <li>
+            <strong>Text decoration</strong><br />
+            <code>p { text-decoration: underline; }<br />
+            p { text-decoration: overline; }<br />
+            p { text-decoration: none; }<br />
+            p { text-decoration: line-through; }</code>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Box Model</h1>
+    <p>Every element on a page is a rectangular <a href="http://www.w3.org/TR/CSS21/box.html" target="_blank">box</a> with the content surrounded by padding, then a border and then a margin.</p>
+    <p>Some text in a paragraph.</p>
+    <p style="margin: 30px; border: 10px solid #333; padding: 50px; background-color: #eee;">Some text in a paragraph.</p>
+    <p>Some text in a paragraph.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Border Properties</h1>
+    <p>
+        <code>p { border-top-width: 3px; }<br />
+        p { border-width: 1px; }<br />
+        p { border-right-color: red; }<br />
+        p { border-color: blue; }<br />
+        p { border-bottom-style: solid; }<br />
+        p { border-style: dashed; }<br />
+        p { border: 1px solid red; }</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Padding Properties</h1>
+    <p>
+        <code>p { padding-left: 50px; }<br />
+        p { padding-right: 20%; }<br />
+        p { padding-top: 50px; }<br />
+        p { padding-bottom: 3em; }<br />
+        p { padding: <em>top right bottom left</em>; }</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Margin Properties</h1>
+    <p>
+        <code>p { margin-left: 50px; }<br />
+        p { margin-right: 20%; }<br />
+        p { margin-top: 50px; }<br />
+        p { margin-bottom: 3em; }<br />
+        p { margin: <em>top right bottom left</em>; }</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>div And span Tags</h1>
+    <p>Styles should be applied to the most appropriate tag. For example, if you want to apply a style to a quotation then use the blockquote tag.</p>
+    <p><code>blockquote { font-weight: bold; }</code></p>
+    <p><code>&lt;blockquote&gt;Quotation&lt;/blockquote&gt;</code></p>
+    <p>If you want to apply a style only to specific quotations then use a class.</p>
+    <p><code>blockquote.director { font-weight: bold; }</code></p>
+    <p><code>&lt;blockquote class=&quot;director&quot;&gt;Quotation&lt;/blockquote&gt;</code></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More div And span Tags</h1>
+    <p>If there's no suitable tag then use a <code>div</code> or <code>span</code> tag.</p>
+    <p>A <code>div</code> is equivalent to a block level element (one that normally starts on a new line) like <code>h1</code> or <code>p</code>, whereas a <code>span</code> is equivalent to an inline element (one that doesn't start a new line) like <code>strong</code> or <code>b</code>.</p>
+    <p><code>span.eventlocation { font-weight: bold; }</code></p>
+    <p><code>&lt;span class=&quot;eventlocation&quot;&gt;Birkbeck College, Malet St&lt;/span&gt;</code></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More div And span Tags</h1>
+    <p><code>div</code> (and <code>span</code>) can be used to group elements rather than repeating classes.</p>
+    <p><code>&lt;p class=&quot;introduction&quot;&gt;First Paragraph&lt;/p&gt;<br />&lt;p class=&quot;introduction&quot;&gt;Second Paragraph&lt;/p&gt;</code></p>
+    <p>could instead be:</p>
+    <p><code>&lt;div class=&quot;introduction&quot;&gt;<br />&lt;p&gt;First Paragraph&lt;/p&gt;<br />&lt;p&gt;Second Paragraph&lt;/p&gt;<br />&lt;/div&gt;</code></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Descendant Selectors</h1>
+    <p>Descendant selectors are a great way to avoid repetition.</p>
+    <p><code>li.nav { font-weight: bold; }</code></p>
+    <p><code>&lt;ul&gt;<br />&lt;li class=&quot;nav&quot;&gt;Home&lt;/li&gt;<br />&lt;li class=&quot;nav&quot;&gt;About Us&lt;/li&gt;<br />&lt;/ul&gt;</code></p>
+    <p>could instead be:</p>
+    <p><code>ul.nav li { font-weight: bold; }</code></p>
+    <p><code>&lt;ul class=&quot;nav&quot;&gt;<br />&lt;li&gt;Home&lt;/li&gt;<br />&lt;li&gt;About Us&lt;/li&gt;<br />&lt;/ul&gt;</code></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>CSS Support</h1>
+    <p>Modern Web browsers (IE7+, Opera 7+, Firefox, Safari, Google Chrome) all have good CSS support.</p>
+    <p>Sites that use CSS should always be <strong>thoroughly</strong> tested on a range of browsers (i.e. different types of browser and different versions of each type of browser).</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Reading</h1>
+    <p>Just a very small sample of what can be done with stylesheets. We haven't looked at colours or positioning.</p>
+    <p>For a brief introduction to stylesheets, read <a href="http://www.w3.org/MarkUp/Guide/Style.html" target="_blank">Adding a touch of style</a>.</p>
+    <p>For more detailed information you should read <a href="http://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a> and <a href="http://www.cssbasics.com/" target="_blank">CSS Basics</a>.</p>
+    <p>The recommended text for learning more about stylesheets is <a href="http://www.amazon.co.uk/exec/obidos/ASIN/073571245X/iansealycom" target="_blank">Eric Meyer on CSS</a>.</p>
+    <div class="handout"></div>
+</div>
