@@ -1,0 +1,547 @@
+---
+title: "Accessible Web Sites"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Kieren Pitts"
+---
+
+<div class="slide">
+<h1>Why Accessibility Is Important</h1>
+<ul>
+<li>10% to 20% of the world's population suffer from disability</li>
+<li>Is increasing as average age of population increases</li>
+<li>Many of these disabilities affect access to the Web (e.g. visual, aural, dexterity and memory problems)</li>
+<li>For example, blind users can't see graphics and users with neurological difficulties might be confused by complex presentation</li>
+<li>Everyone has a right to access the Web</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>It's The Law</h1>
+<ul>
+<li>In the UK there is a legal obligation under the <a href="http://homeoffice.gov.uk/equalities/equality-act/" target="ea2010">Equality Act 2010</a> (previously covered under the Disability Discrimination Act 1995)</li>
+<li>Most countries have disability discrimination laws</li>
+<li>Numbers make commercial sense</li>
+<li>&gt;2 million visually impaired people in the UK; 161 million globally</li>
+<li><a href="http://www.w3.org/WAI/bcase/Overview" target="business">Developing a Web Accessibility Business Case for Your Organization</a></li>
+<li>Useful to convince clients</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Why Accessibility Is Important To All Users</h1>
+
+<p>Accessible Web sites can be used in a variety of environments:</p>
+<ul>
+<li>Low bandwidth, where images are slow to download (because accessible sites are usable without images)</li>
+<li>Noisy, where difficult to hear audio</li>
+<li>Bright, where difficult to see screen</li>
+<li>Mobile phone, where display is small</li>
+</ul>
+
+<p>Also good for search engines...</p>
+
+<div class="handout">
+</div>
+
+</div>
+
+<div class="slide">
+<h1>Definitive Resources</h1>
+
+<ul>
+<li>Best work done by World Wide Web Consortium's Web Accessibility Initiative (WAI):<br />
+<a href="http://www.w3.org/WAI/" target="wait">http://www.w3.org/WAI/</a></li>
+
+<li><a href="http://www.w3.org/WAI/gettingstarted/" target="started">WAI Resources on Introducing Web Accessibility</a></li>
+
+<li>Web Content Accessibility Guidelines (WCAG)
+<ul>
+    <li>Version 1 (1999)
+        <ul>
+        <li><a href="http://www.w3.org/TR/WCAG10/" target="guidelines1">Guidelines (WCAG 1.0)</a></li>
+        <li><a href="http://www.w3.org/TR/WCAG10-TECHS/" target="techniques1">Techniques</a></li>
+        <li><a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist1">Checklist of Checkpoints</a></li>
+
+        </ul>
+    </li>
+
+    <li>Version 2 (2008)
+        <ul>
+        <li><a href="http://www.w3.org/TR/WCAG20/" target="guidelines2">Guidelines (WCAG 2.0)</a></li>
+        <li><a href="http://www.w3.org/TR/WCAG20-TECHS/" target="techniques2">Techniques</a></li>
+        <li><a href="http://www.w3.org/WAI/WCAG20/quickref/" target="checklist2">How to meet WCAG2</a></li>
+        </ul>
+    </li>
+
+</ul>
+
+</li>
+<li><a href="http://www.w3.org/WAI/WCAG20/from10/comparison/" target="comp">Comparison of WCAG1 and WCAG2 checkpoints</a></li>
+<li><a href="http://webaim.org/standards/wcag/checklist" target="webaim2">Web Accessibility In Mind</a></li>
+<li>WCAG2.1 under exploration</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Structure of WCAG 1</h1>
+
+<p>From <a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist">Checklist of Checkpoints for Web Content Accessibility Guidelines</a>:</p>
+
+<ul>
+<li><strong>Priority 1</strong> - &quot;A Web content developer <strong>must</strong> satisfy this checkpoint. Otherwise, one or more groups will find it impossible to access information in the document. Satisfying this checkpoint is a basic requirement for some groups to be able to use Web documents.&quot;
+
+<br /><br />Also called &quot;A&quot; or &quot;single A&quot; checkpoints.
+</li>
+
+</ul>
+<div class="handout">
+</div>
+
+</div>
+
+<div class="slide">
+<h1>Structure of WCAG 1</h1>
+
+<ul>
+<li><strong>Priority 2</strong> - &quot;A Web content developer <strong>should</strong> satisfy this checkpoint. Otherwise, one or more groups will find it difficult to access information in the document. Satisfying this checkpoint will remove significant barriers to accessing Web documents.&quot;
+
+<br /><br />Also called &quot;AA&quot; or &quot;double A&quot; checkpoints.</li>
+
+<li><strong>Priority 3</strong> - &quot;A Web content developer <strong>may address</strong> this checkpoint. Otherwise, one or more groups will find it somewhat difficult to access information in the document. Satisfying this checkpoint will improve access to Web documents.&quot;
+
+<br /><br />Also called &quot;AAA&quot; or &quot;triple A&quot; checkpoints.</li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>Structure of WCAG 2</h1>
+
+<ul>
+<li>Decreased focus on technology and increased focus on principles</li>
+<li>Aimed at many different groups of people and not just developers</li>
+
+<li>Four layers of guidance:
+
+<ul>
+<li>Principles</li>
+<li>Guidelines</li>
+<li>Success criteria</li>
+<li>Sufficient and Advisory Techniques - examples of techniques used to meet each success criteria</li>
+</ul>
+
+</li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>WCAG 2 Principles</h1>
+
+<p>Four principles provide a foundation for Web accessibility. Content must be:</p>
+
+<ul>
+<li>Perceivable - information must be perceivable; not hidden to all of a user's senses</li>
+<li>Operable - user interface components and navigation must be operable</li>
+
+<li>Understandable - users must be able to understand the information presented and the user interface</li>
+<li>Robust - content must be reliably interpreted by a variety of user agents (Web browsers, mobile phones, screen readers etc...)</li>
+</ul>
+
+<p>If any of these principles are not adhered to then a disabled user will not be able to access the content.</p>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>WCAG 2 Guidelines</h1>
+
+<p>There are a total of twelve guidelines under the four principles:</p>
+
+<ul>
+<li>Perceivable
+    <ul>
+    <li>Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, Braille, speech, symbols or simpler language</li>
+
+    <li>Provide alternatives for time-based media</li>
+    <li>Create content that can be presented in different ways (for example, simpler layout) without losing information or structure</li>
+
+    <li>Make it easier for users to see and hear content, including separating foreground from background</li>
+    </ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>WCAG 2 Guidelines</h1>
+
+<ul>
+
+<li>Operable
+    <ul>
+    <li>Make all functionality available from a keyboard</li>
+    <li>Provide users enough time to read and use content</li>
+    <li>Do not design content in a way that is known to cause seizures</li>
+
+    <li>Provide ways to help users navigate, find content, and determine where they are</li>
+    </ul>
+
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>WCAG 2 Guidelines</h1>
+
+<ul>
+
+<li>Understandable
+    <ul>
+    <li>Make text content readable and understandable</li>
+
+    <li>Make Web pages appear and operate in predictable ways</li>
+    <li>Help users avoid and correct mistakes</li>
+    </ul>
+</li>
+<li>Robust
+    <ul>
+    <li>Maximize compatibility with current and future user agents, including assistive technologies</li>
+
+    </ul>
+
+</li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>WCAG 2 Success Criteria</h1>
+
+<ul>
+
+<li>Broadly analogous with the checkpoints of WCAG 1 but WCAG 2 Success Criteria are testable to ensure conformance</li>
+
+<li>Three levels of conformance:
+
+<ul>
+<li>A - most important success criteria to meet. Failure to do so will present a barrier to one or more groups of users.</li>
+<li>AA</li>
+<li>AAA</li>
+</ul>
+
+</li>
+
+<li>A is lowest, AAA is highest</li>
+
+<li>For content to claim 'AAA' conformance then it will have to meet <strong>all</strong> A, AA and AAA success criteria</li>
+
+<li>Even content that conforms at the highest level (AAA) will not be accessible to individuals with all types, degrees, or combinations of disability, particularly in the cognitive language and learning areas</li>
+
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>What Guidelines should you use?</h1>
+
+<p>The <a href="http://www.w3.org/TR/WCAG20/#abstract" target="w3cadvice">W3C suggest</a>:</p>
+
+<blockquote>
+Although it is possible to conform either to WCAG 1.0 or to WCAG 2.0 (or both), the W3C recommends that new and updated content use WCAG 2.0. The W3C also recommends that Web accessibility policies reference WCAG 2.0.
+</blockquote>
+
+<p>Managers should be aware of <a href="http://shop.bsigroup.com/en/ProductDetail/?pid=000000000030180388" target="bs8878">BS 8878</a>.</p>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>What conformance level should you use?</h1>
+
+<ul>
+
+<li>Conformance level is often determined by the content being presented and what techniques are available to make it accessible</li>
+
+<li>In <em>general</em>, meeting conformance level A is considered a basic requirement for creating an accessible Web site</li>
+
+<li>That said, most (good) developers aim to meet all the A and AA success criteria and as many of the AAA criteria as is practicable</li>
+
+<li>The W3C say: <q>It is not recommended that Level AAA conformance be required as a general policy for entire sites because it is not possible to satisfy all Level AAA Success Criteria for some content</q></li>
+
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Conformance Level A</h1>
+
+<ul>
+
+<li>1.1.1 - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose<br />
+(for example, alt attribute for images; use <code>alt=&quot;&quot;</code> if image isn't important) - <a href="http://www.roverp6cars.com/" target="rp6p">example</a></li>
+
+<li>2.3.1 - Web pages do not contain anything that flashes more than three times in any one second period - <a href="http://www.dokimos.org/ajff/" target="flicker">example</a></li>
+
+<li>1.4.1 - Color is not used as the only visual means of conveying information.</li>
+
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Colour</h1>
+<table border="1" cellspacing="0" cellpadding="10">
+<tr>
+<th>&nbsp;</th>
+
+<th>Placebo</th>
+<th>Aspirin</th>
+</tr>
+
+<tr>
+<th>Male</th>
+<td>10</td>
+
+<td>11</td>
+</tr>
+<tr>
+<th>Female</th>
+
+<td>8</td>
+<td style="color : #ff0000;">37</td>
+
+</tr>
+</table>
+<p>Significant results are shown in red</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Colour</h1>
+<table border="1" cellspacing="0" cellpadding="10">
+<tr>
+
+<th>&nbsp;</th>
+<th>Placebo</th>
+
+<th>Aspirin</th>
+</tr>
+<tr>
+<th>Male</th>
+<td>10</td>
+
+<td>11</td>
+</tr>
+<tr>
+<th>Female</th>
+
+<td>8</td>
+
+<td style="color : #ff0000;">37 *</td>
+</tr>
+</table>
+<p>Significant results are shown in red and marked with an asterisk</p>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Conformance Level A</h1>
+<ul>
+
+<li>4.1.1 - In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique (&quot;Use valid HTML&quot; was Priority 2 in WCAG 1)</li>
+
+<li>1.3.2 - When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined (&quot;Don't use tables for layout unless the tables make sense when linearised&quot; was Priority 2 in WCAG 1)</li>
+</ul>
+<div class="handout">
+
+</div>
+</div>
+
+<div class="slide">
+<h1>Conformance Level AA</h1>
+<ul>
+<li>1.3.1 - Information, structure, and relationships conveyed through presentation can be programmatically determined (e.g. use <code>&lt;th&gt;</code> to identify header cells, not <code>&lt;td&gt;&lt;b&gt;</code>; also covers using headings appropriately)</li>
+
+<li>2.1.1 - All functionality of the content is operable through a keyboard interface - <a href="http://www.butterfly-conservation.org/" target="bc">example</a></li>
+
+<li>(WCAG 1 had a Priority 1 checkpoint that said &quot;Ensure pages are <a href="https://www.rms.org.uk/" target="rms">usable when scripts are turned off</a>&quot;. In WCAG 2 there is no requirement for pages to work when scripts are turned off but scripts must be accessible - although it's advisable to still check pages with scripts turned off for other reasons.)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Conformance Level AA</h1>
+
+<ul>
+<li>1.4.3 - The visual presentation of text and images of text has a contrast ratio of at least <a href="http://webaim.org/resources/contrastchecker/" target="checkcont">4.5:1</a> - <a href="http://docs.emmet.io/cheat-sheet/" target="contrast">example</a> (High contrast, not <span style="color : #cccccc">low contrast</span> is also important in bright environments, not just for users with poor vision.)</li>
+
+<li>1.4.5 - Text is used to convey information rather than <a href="http://www.roverp6cars.com/" target="images">images</a> of text</li>
+
+<li>1.4.4 - Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Conformance Level AA</h1>
+<ul>
+
+<li>2.2.2 - For any moving, blinking or scrolling information there is a mechanism for the user to pause, stop, or hide</li>
+<li>2.2.1 - Timing Adjustable: provide a mechanism to request an update of the content instead of <a href="http://www.livedepartureboards.co.uk/ldb/sumdep.aspx?T=KGX&amp;R=1&amp;A=0" target="refresh">updating automatically</a><br />
+<code>&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;30&quot;&gt;</code>
+
+</li>
+<li>Also applies to <a href="http://friendsfiduciary.quaker.org/" target="redirect">redirections</a> (except on the server)<br />
+
+<code>&lt;meta http-equiv=&quot;Refresh&quot; content=&quot;30; URL=http://google.com/&quot;&gt;</code>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>More Conformance Level AA</h1>
+<ul>
+
+<li>2.4.5 - More than one way is available to locate a Web page within a set of Web pages (for example, include a site map or table of contents - useful for all users, but especially those with cognitive difficulties)</li>
+<li>3.2.3 - Navigational mechanisms that are repeated on multiple Web pages occur in the same relative order each time they are repeated - <a href="http://www.dell.com/" target="dell">example</a></li>
+<li>3.2.4 - Components that have the same functionality within a set of Web pages are identified consistently</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Conformance Level AAA</h1>
+<ul>
+<li>3.1.4 - A mechanism for identifying the expanded form or meaning of abbreviations is available</li>
+
+<li>1.4.6 - Contrast (Enhanced) - The visual presentation of text and images of text has a contrast ratio of at least 7:1</li>
+<li>1.2.6 - Sign language interpretation is provided for all prerecorded audio content in synchronized media</li>
+<li>2.4.8 - Location: Information about the user's location within a set of Web pages is available</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Assessing Accessibility</h1>
+<ul>
+<li>Assess manually
+<ul>
+
+<li>Go through Success Criteria and example techniques</li>
+<li><a href="http://www.w3.org/WAI/eval/Overview.html" target="eval">Evaluating Web Sites for Accessibility</a></li>
+</ul>
+</li>
+
+<li>Assess &quot;automatically&quot;
+
+<ul>
+<li>Use <a href="http://wave.webaim.org/" target="wave">WAVE</a></li>
+<li>Use <a href="http://achecker.ca/checker/" target="checker">ATRC Checker</a></li>
+
+<li>Use <a href="http://www.cynthiasays.com/" target="cynthia">Cynthia Says</a></li>
+<li>Only semi-automatic so <strong>still</strong> need manual checks</li>
+</ul>
+</li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Resources</h1>
+<ul>
+<li><a href="http://www.w3.org/TR/WCAG10/" target="guidelines1">WCAG1 - Guidelines</a></li>
+<li><a href="http://www.w3.org/TR/WCAG10-TECHS/" target="techniques1">WCAG1 -  Techniques</a></li>
+<li><a href="http://www.w3.org/TR/WCAG10/full-checklist.html" target="checklist1">WCAG1 - Checklist of Checkpoints</a></li>
+<li><a href="http://www.w3.org/TR/WCAG20/" target="guidelines2">WCAG2 -  Guidelines</a></li>
+<li><a href="http://www.w3.org/TR/WCAG20-TECHS/" target="techniques2">WCAG2 - Techniques</a></li>
+<li><a href="http://www.w3.org/WAI/WCAG20/quickref/" target="checklist2">How to meet WCAG2</a></li>
+<li><a href="http://www.w3.org/WAI/WCAG20/from10/comparison/" target="comp">Comparison of WCAG1 and WCAG2 checkpoints</a></li>
+<li><a href="http://webaim.org/standards/wcag/checklist" target="webaim2">Web Accessibility In Mind</a></li>
+<li><a href="http://www.w3.org/WAI/demos/bad/" target="bad">Before and After demonstration</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>Example Legal Cases</h1>
+<ul>
+<li><a href="http://www.lexology.com/library/detail.aspx?g=8a72303b-5f11-4ae0-9700-fee7f9b93674" target="netflix">Netflix</a></li>
+<li><a href="http://www.brodies.com/blog/technology/ecommerce/rnib-launches-web-accessibility-discrimination-claim-against-bmi-baby/" target="bmibaby">BMI Baby</a></li>
+<li><a href="http://www.tomw.net.au/2001/bat2001f.html" target="olympics">2000 Sydney Olympics</a></li>
+<li><a href="http://www.out-law.com/page-9389" target="target">Target</a></li>
+</ul>
+
+<p>Case study</p>
+
+<ul>
+<li><a href="http://www.w3.org/WAI/bcase/tesco-case-study" target="tesco">Tesco case study</a></li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Screen Reader video</h1>
+<ul>
+<li><a href="http://www.youtube.com/watch?v=uMLjnwyTxiI" target="jaws">JAWS</a></li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
