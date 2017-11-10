@@ -1,0 +1,94 @@
+---
+title: "HTML and CSS validation"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Kieren Pitts"
+---
+
+<div class="slide">
+<h1>Introduction</h1>
+<ul>
+<li>HTML has rules (e.g. <code>&lt;tr&gt;</code> <strong>must</strong> appear within <code>&lt;table&gt;</code>)</li>
+<li>If rules are broken then HTML is not valid</li>
+<li>Rules are known as Document Type Definition (DTD)
+<ul>
+<li>DOCTYPE specifies DTD and must be the first line in an HTML document</li>
+<li>Specifies HTML version used, for example HTML 4.01</li>
+</ul>
+</li>
+</ul>
+
+<code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>All Documents Must Have A DOCTYPE</h1>
+<p>XHTML DOCTYPE:<br />
+<b><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd"&gt;</code></b></p>
+
+<p>HTML 4 and XHTML have several different versions of the DOCTYPE including 'strict' or 'transitional/loose'. For now, use 'transitional/loose'</p>
+
+<p>HTML5 DOCTYPE:<br />
+<b><code>&lt;!DOCTYPE html&gt;</code></b></p>
+<p>It is important that you use the correct DOCTYPE for the version of HTML you are using.</p>
+<p>For new sites we suggest you use HTML5.</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Invalid HTML</h1>
+<ul>
+<li>Invalid HTML is:-
+<ul>
+<li>Not accessible</li>
+<li>Hard to debug</li>
+<li>The single biggest reason for display problems when using CSS positioning</li>
+</ul>
+</li>
+<li>All your pages should be valid</li>
+<li>CSS also has rules and must also be valid</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Validation</h1>
+<ul>
+<li><a href="http://validator.w3.org/" target="_blank">W3C HTML Validation Service</a></li>
+<li>W3C requires DOCTYPE and an encoding, for example:<br />
+<code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot;&gt;</code> for HTML4.<br />For HTML5 use: &lt;meta charset=&quot;UTF-8&quot;&gt;</li>
+<li><a href="http://validator.w3.org/nu/" target="_blank">Nu validator</a></li>
+<li><a href="http://www.htmlhelp.org/tools/validator/" target="_blank">WDG HTML Validator</a></li>
+<li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Service</a></li>
+<li>Can be accessed via the Web Developer Toolbar in Firefox or Chrome</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Tips for validating</h1>
+<ul>
+<li>Errors cascade - once you have one error it can cause others to be reported in the same page</li>
+<li>When starting out, <strong>always fix the first error in the list first</strong> and then re-validate and fix the next</li>
+<li>The validator reports a line and column number - use this to track down the problem
+<ul>
+<li>Errors might not always be at this point, but will be close by</li>
+</ul>
+</li>
+<li>If you don't understand the error message, use the <a href="http://validator.w3.org/docs/errors.html" target="_blank">online help for the validator</a> and, failing that, ask on the mailing list
+</li>
+<li>If your pages don't display as intended, <strong>validate your code and fix any errors</strong>. Don't try and diagnose issues when you have invalid code.</li>
+<li>Make sure the validator is using the correct version of HTML or CSS when validating your code</li>
+</ul>
+<div class="handout">
+</div>
+</div>
