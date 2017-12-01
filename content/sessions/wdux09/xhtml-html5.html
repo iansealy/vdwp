@@ -1,0 +1,245 @@
+---
+title: "XHTML And HTML5"
+date: 2017-10-13T10:23:41+01:00
+draft: false
+type: slides
+presenter: "Ian Sealy"
+---
+
+<div class="slide">
+    <h1>What Is XHTML?</h1>
+    <ul>
+        <li>HTML 4 rewritten in XML</li>
+        <li>
+            XHTML 1 was therefore the next version of HTML
+            <ul>
+                <li>but now there is also HTML5 (more later...)</li>
+            </ul>
+        </li>
+        <li>
+            XHTML 1.0 drafted in 1998 and finalised in 2002 and is still used<br />
+            (<a href="http://try.powermapper.com/Stats/HtmlVersions" target="_blank">HTML version statistics</a>)
+        </li>
+        <li>Offers advantages of XML (extensible, machine-readable, etc...), but is backwards compatible with HTML (will work on old browsers)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>How Is XHTML Different From HTML?</h1>
+    <ul>
+        <li>Documents must be well-formed</li>
+        <li>Tags must be in lower case</li>
+        <li>All elements must be closed</li>
+        <li>Attribute values must be quoted</li>
+        <li>Attributes can't be minimised</li>
+        <li>All documents must have a DOCTYPE declaration</li>
+    </ul>
+    <p>Also other trivial differences</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Documents Must Be Well-Formed</h1>
+    <p>Elements must be nested correctly.</p>
+    <p>
+        Current browsers will allow<br />
+        <strong><code>&lt;strong&gt;&lt;em&gt;test&lt;/strong&gt;&lt;/em&gt;</code></strong> (as in <strong><em>test</strong></em>),<br />
+        but in an XHTML document this would be invalid. It must be<br />
+        <strong><code>&lt;strong&gt;&lt;em&gt;test&lt;/em&gt;&lt;/strong&gt;</code></strong> (as in <strong><em>test</em></strong>).
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Tags Must Be In Lower Case</h1>
+    <ul>
+        <li>Elements and attributes must be in lower case</li>
+        <li><strong><code>&lt;TD&nbsp;valign=&quot;top&quot;&gt;</code></strong> was recommended in HTML 4 (more readable), but in XHTML it must be <strong><code>&lt;td&nbsp;valign=&quot;top&quot;&gt;</code></strong></li>
+        <li>Reason why we have recommended this</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>All Elements Must Be Closed</h1>
+    <p>
+        In HTML 4<br />
+        <strong><code>&lt;p&gt;1st&nbsp;para&lt;p&gt;2nd&nbsp;para</code></strong><br />
+        is valid. In XHTML it must be<br /><strong><code>&lt;p&gt;1st&nbsp;para&lt;/p&gt;&lt;p&gt;2nd&nbsp;para&lt;/p&gt;</code></strong>
+    </p>
+    <p>This means that <strong><code>&lt;hr&gt;</code></strong>, <strong><code>&lt;br&gt;</code></strong> and <strong><code>&lt;img&gt;</code></strong> are all invalid.</p>
+    <p>So <strong><code>&lt;hr&gt;</code></strong> must be <strong><code>&lt;hr&gt;&lt;/hr&gt;</code></strong> or <strong><code>&lt;hr/&gt;</code></strong>.</p>
+    <p>Neither of these work well in some really old browsers, so use <strong><code>&lt;hr&nbsp;/&gt;</code></strong> instead.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Closed Element Examples</h1>
+    <p>Here's an <strong><code>&lt;hr&gt;</code></strong>:</p>
+    <hr>
+    <p>Here's an <strong><code>&lt;hr&gt;&lt;/hr&gt;</code></strong>:</p>
+    <hr></hr>
+    <p>Here's an <strong><code>&lt;hr/&gt;</code></strong>:</p>
+    <hr/>
+    <p>Here's an <strong><code>&lt;hr&nbsp;/&gt;</code></strong>:</p>
+    <hr />
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Attribute Values Must Be Quoted</h1>
+    <ul>
+        <li>Browsers don't care if you use <strong><code>&lt;tr&nbsp;valign=top&gt;</code></strong> or <strong><code>&lt;tr&nbsp;valign="top"&gt;</code></strong></li>
+        <li>In XHTML it must be <strong><code>&lt;tr&nbsp;valign=&quot;top&quot;&gt;</code></strong></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Attributes Can't Be Minimised</h1>
+    <p><strong><code>&lt;hr&nbsp;noshade&gt;</code></strong> is actually an abbreviation of <strong><code>&lt;hr&nbsp;noshade=&quot;noshade&quot;&gt;</code></strong>. In XHTML must use <strong><code>&lt;hr&nbsp;noshade=&quot;noshade&quot;&gt;</code></strong>.</p>
+    <p>Some very old browsers have problems with this (but it's not worth worrying about).</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Minimised Examples</h1>
+    <p>Here's an <strong><code>&lt;hr&nbsp;noshade&gt;</code></strong>:</p>
+    <hr noshade>
+    <p>Here's an <strong><code>&lt;hr&nbsp;noshade=&quot;noshade&quot;&gt;</code></strong>:</p>
+    <hr noshade="noshade">
+    <p>Should actually be <strong><code>&lt;hr&nbsp;noshade=&quot;noshade&quot;&nbsp;/&gt;</code></strong>:</p>
+    <hr noshade="noshade" />
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>All Documents Must Have A DOCTYPE</h1>
+    <p>
+        An example of an XHTML DOCTYPE:<br />
+        <strong><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd"&gt;</code></strong>
+    </p>
+    <p>This DTD (document type definition) or DOCTYPE defines the structure of the document (what tags can be used and where they can be used) in a machine-readable format.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>DOCTYPEs</h1>
+    <ul>
+        <li>DOCTYPEs are essential</li>
+        <li>Indicate the version of HTML or XHTML used in a page</li>
+        <li>Web browsers and validators need to know this in order to interpret a page</li>
+        <li>Pages aren't valid without a DOCTYPE</li>
+        <li>Without a DOCTYPE (or with an invalid DOCTYPE) browsers enter quirks mode, which is slower and displays pages differently</li>
+        <li><a href="http://www.alistapart.com/articles/doctype/" target="_blank">More Information</a> and <a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="_blank">List of DOCTYPEs</a></li>
+        <li>Ideally <a href="http://www.456bereastreet.com/archive/200609/no_more_transitional_doctypes_please/" target="_blank">use a Strict DOCTYPE</a> (if you have to use XHTML rather than HTML5), but sometimes have to use Transitional (e.g. for iframes)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Why Use XHTML?</h1>
+    <ul>
+        <li>XHTML DOCTYPEs were, until relatively recently, the most widely used, so you're bound to use XHTML sooner or later</li>
+        <li>XHTML is extensible - new tags can be added</li>
+        <li>XHTML works with older browsers as well as current browsers</li>
+        <li>XHTML is less complex than HTML, so browsers can be simpler and smaller and so will run on a wider range of devices</li>
+        <li>(Writing HTML5 in an XHTML-like way leads to maintainable code)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Converting HTML To XHTML</h1>
+    <ul>
+        <li>Conversion can be done manually</li>
+        <li>HTML Tidy can automatically convert HTML to XHTML</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>What's Next?</h1>
+    <ul>
+        <li>
+            W3C started drafting XHTML 2.0 in 2002
+            <ul>
+                <li>Revolutionary approach - how things should be rather than how they are</li>
+                <li>Not backwards compatible</li>
+                <li>Needs to be implemented in an all or nothing fashion</li>
+                <li>e.g. <code>nl</code> tag for navigation lists; <code>hr</code> becomes <code>separator</code></li>
+            </ul>
+        </li>
+        <li>Lots of developer and browser maker resistance</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>What Instead?</h1>
+    <ul>
+        <li><a href="http://www.whatwg.org/" target="_blank">WHATWG</a> started work on HTML5 in 2004</li>
+        <li>
+            Founded by browser makers (Apple, Mozilla and Opera), but an open process
+            <ul>
+                <li>Evolutionary approach - start from how things are</li>
+                <li>Backwards compatible</li>
+                <li>Can be implemented gradually</li>
+            </ul>
+        </li>
+        <li>W3C now also involved</li>
+        <li>Standard still being worked on, but many features are already implemented (e.g. <code>canvas</code> tag)</li>
+        <li><a href="http://www.alistapart.com/articles/a-brief-history-of-markup/" target="_blank">A Brief History of Markup</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Differences in HTML5</h1>
+    <p>Some differences trivial, for example:</p>
+    <ul>
+        <li><code>&lt;a&gt;</code> tag (an inline tag) can wrap block elements</li>
+    </ul>
+    <p>In HTML 4 and XHTML, have to do:</p>
+    <p>
+        <code>&lt;h3&gt;&lt;a href=&quot;article.html&quot;&gt;Headline&lt;/a&gt;&lt;/h3&gt;</code><br/>
+        <code>&lt;p&gt;&lt;a href=&quot;article.html&quot;&gt;Enticing introductory paragraph.&lt;/a&gt;&lt;/p&gt;</code><br/>
+        <code>&lt;p&gt;&lt;a href=&quot;article.html&quot;&gt;Read more...&lt;/a&gt;&lt;/p&gt;</code>
+    </p>
+    <p>But in HTML5, can reduce repetition:<p>
+    <p>
+        <code>&lt;a href=&quot;article.html&quot;&gt;<br/>&lt;h3&gt;Headline&lt;/h3&gt;</code><br/>
+        <code>&lt;p&gt;Enticing introductory paragraph.&lt;/p&gt;</code><br/>
+        <code>&lt;p&gt;Read more...&lt;/p&gt;<br/>&lt;/a&gt;</code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Differences in HTML5</h1>
+    <p>Some more involved highlights:</p>
+    <ul>
+        <li>New elements, e.g. <code>header</code>, <code>footer</code>, <code>nav</code>, <code>audio</code>, <code>video</code></li>
+        <li>Canvas - use JavaScript to draw graphics on the fly (<a href="http://html5demos.com/canvas" target="_blank">Example 1</a> and <a href="http://html5demos.com/canvas-grad" target="_blank">Example 2</a>)</li>
+        <li>New form controls, e.g. for dates, times, email addresses and URLs</li>
+        <li>Local storage (<a href="http://html5demos.com/storage" target="_blank">Example</a>)</li>
+    </ul>
+    <p>Support is not universal (e.g. canvas was only added in IE9). Can use libraries like <a href="http://www.modernizr.com/" target="_blank">Modernizr</a> to detect support for new features. (Also are JavaScript libraries to add canvas support to earlier versions of IE.)</p>
+    <ul>
+        <li><a href="http://html5demos.com/" target="_blank">HTML 5 Demos and Examples</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Further Info</h1>
+    <ul>
+        <li><a href="http://www.w3.org/TR/xhtml1/" target="_blank">The official XHTML 1.0 Recommendation</a></li>
+        <li><a href="https://w3c.github.io/html/" target="_blank">HTML5 working draft</a></li>
+        <li><a href="http://www.w3.org/TR/xhtml2/" target="_blank">XHTML 2 working draft</a></li>
+        <li><a href="http://diveintohtml5.info/" target="_blank">Dive Into HTML5</a></li>
+        <li><a href="http://html5doctor.com/" target="_blank">HTML5 Doctor</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
