@@ -1,0 +1,131 @@
+---
+title: "Server Side Includes (SSIs)"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Kieren Pitts"
+---
+
+<div class="slide">
+
+<h1>Server Side Includes</h1>
+
+<ul>
+<li>Server Side Includes (SSIs) are directives/instructions within a web page that are <em>parsed</em> by the Web server <strong>before</strong> the page is returned to the browser</li>
+<li>These instructions can be used to include other files or show extra information</li>
+<li>Most Web servers support SSIs</li>
+<li>Only covering <a href="http://httpd.apache.org/" target="_blank">Apache</a> because it's the <a href="https://news.netcraft.com/archives/2017/12/26/december-2017-web-server-survey.html" target="_blank"> most popular Web server</a> and DreamHost uses it</li>
+<li>You need a web server. <strong>SSIs won't be included if files are viewed offline</strong></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>Repetitive HTML</h1>
+
+<ul>
+<li>Separate presentation from content by storing repetitive HTML fragments in a separate file.</li>
+<li>Each fragment can then be included in many pages using SSIs</li>
+<li>HTML fragments <strong>don't have to represent valid HTML</strong> (or complete pages) themselves</li>
+<li>The web server combines all the SSIs and page code together <strong>before</strong> sending it to the browser. Only at this point does the code need to be valid HTML.</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Parsed Files and Syntax</h1>
+<ul>
+<li>Many file types can be parsed for SSIs</li>
+<li>Since parsing a file is more work for the server, files to be parsed are often identified by file extension, with .shtml being common (this is the case on <a target="_blank" href="http://blog.dreamhosters.com/kbase/index.cgi?area=174">DreamHost</a>)</li>
+
+<li>Basic syntax:<br /><code>&lt;!--#element attribute=value --&gt;</code></li>
+<li>Example:<br /><code>&lt;!--#echo var=&quot;DATE_LOCAL&quot; --&gt;</code></li>
+<li><code>&lt;!--#echo var=&quot;LAST_MODIFIED&quot; --&gt;</code></li>
+<li><code>&lt;!--#echo var=&quot;DATE_GMT&quot; --&gt;</code></li>
+
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+
+<h1>Changing format</h1>
+<ul>
+<li>Can set the format of the time using, e.g.:</li>
+<li><code>&lt;!--#config timefmt=&quot;%B %d, %Y&quot; --&gt;</code></li>
+<li><a href="http://www.comptechdoc.org/independent/web/cgi/ssimanual/ssitime.html" target="_blank">Time formatting codes</a></li>
+<li>The above formatting works on Dreamhost, but if it doesn't then can use a .htaccess file to do the same (see later slide)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Separation of Content and Presentation</h1>
+<p>Most common use for SSIs</p>
+
+<p>Example file:</p>
+<code>
+&lt;!--#include virtual=&quot;ssi/header.ssi&quot; --&gt;
+<br />
+&lt;p&gt;Content&lt;/p&gt;
+<br />
+&lt;!--#include virtual=&quot;/ssi/footer.ssi&quot; --&gt;
+</code>
+
+<p>In this case <code>header.ssi</code> and <code>footer.ssi</code> are in an <code>ssi</code> subdirectory but where you put them in your htdocs is up to you.</p>
+<p>Can use either relative path (<code>ssi/header.ssi</code>) or absolute path (<code>/ssi/footer.ssi</code>)</p>
+
+<p>Now you only need to edit <code>ssi/header.ssi</code> and <code>ssi/footer.ssi</code> to change the look and feel</p>
+
+<p>File extension is not important, common extensions are .html, .ssi or .txt</p>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>.htaccess files</h1>
+<ul>
+<li>.htaccess is just a configuration file that you put in a directory. It allows a custom configuration to be applied to a directory and any sub-directories within it</li>
+<li>On Windows, you may have to upload the file as htaccess.txt (for example) and then rename it to .htaccess because Windows doesn't allow you to create files that begin with a .</li>
+<li>Files beginning with a . may be hidden in your FTP client so you may need to configure it to display hidden files.</li>
+<li>Word of warning - if you get the syntax of a directive within an .htaccess file wrong you'll probably receive a server error. Web servers are <strong>fault intolerant</strong></li>
+<li>Example date/time formatting:<br /><code>SSITimeFormat &quot;%B %d, %Y&quot;</code></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+
+<h1>Allowing other files to include SSIs using .htaccess</h1>
+
+<ul>
+<li>Dreamhost's default setup is to only parse .shtml files for SSIs</li>
+<li>To allow other files to be parsed, create a .htaccess file which contains:
+<ul>
+<li><code>AddHandler server-parsed .filenametobeparsed</code></li>
+</ul>
+</li>
+<li>For example, to parse .html, .htm and .ssi files your .htaccess file would contain:
+<ul>
+<li><code>AddHandler server-parsed .html</code></li>
+<li><code>AddHandler server-parsed .htm</code></li>
+<li><code>AddHandler server-parsed .ssi</code></li>
+</ul>
+</li>
+<li><em>Remember</em>, using SSIs means you <strong>must view your pages online</strong></li>
+<li><em>Remember</em>, SSIs do not need to be complete HTML documents on their own</li>
+</ul>
+<div class="handout">
+</div>
+</div>
