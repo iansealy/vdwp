@@ -1,5 +1,5 @@
-title: Web Development and User Experience
-baseURL: http://wdux1718.bbkweb.org/
+title: Visual Design and Web Project
+baseURL: http://vdwp1718.bbkweb.org/
 languagecode: en-gb
 defaultlayout: page
 disablekinds: [taxonomy, taxonomyTerm, RSS, sitemap, robotsTXT]
@@ -13,50 +13,51 @@ blackfriday:
 params:
   longyear: "2017/2018"
   shortyear: "1718"
-  shortname: "wdux"
-  url: "wdux1718.bbkweb.org"
-  session01name: WDUX01
-  session01date: "2017-10-14"
+  shortname: "vdwp"
+  url: "vdwp1718.bbkweb.org"
+  session01name: VDWP01
+  session01date: "2018-01-13"
   session01time: "09:30-16:30"
   session01tutors: "Ian Sealy & Kieren Pitts"
-  session02name: WDUX02
-  session02date: "2017-10-17"
+  session02name: VDWP02
+  session02date: "2018-01-16"
   session02time: "18:00-21:00"
-  session02tutors: "Peter Otto & Martina Schell"
-  session03name: WDUX03
-  session03date: "2017-10-28"
-  session03time: "09:30-16:30"
-  session03tutors: "Ian Sealy & Kieren Pitts"
-  session04name: WDUX04
-  session04date: "2017-10-31"
-  session04time: "18:00-21:00"
-  session04tutors: "Peter Otto & Martina Schell"
-  session05name: WDUX05
-  session05date: "2017-11-07"
+  session02tutors: "Jonathan Fox & Ines Rebelo"
+  session03name: VDWP03
+  session03date: "2018-01-23"
+  session03time: "18:00-21:00"
+  session03tutors: "Jonathan Fox & Ines Rebelo"
+  session04name: VDWP04
+  session04date: "2018-01-27"
+  session04time: "09:30-16:30"
+  session04tutors: "Ian Sealy & Kieren Pitts"
+  session05name: VDWP05
+  session05date: "2018-01-30"
   session05time: "18:00-21:00"
-  session05tutors: "Peter Otto & Martina Schell"
-  session06name: WDUX06
-  session06date: "2017-11-11"
-  session06time: "09:30-16:30"
-  session06tutors: "Ian Sealy & Kieren Pitts"
-  session07name: WDUX07
-  session07date: "2017-11-21"
-  session07time: "18:00-21:00"
-  session07tutors: "Peter Otto & Martina Schell"
-  session08name: WDUX08
-  session08date: "2017-11-28"
+  session05tutors: "Jonathan Fox & Ines Rebelo"
+  session06name: VDWP06
+  session06date: "2018-02-06"
+  session06time: "18:00-21:00"
+  session06tutors: "Jonathan Fox & Ines Rebelo"
+  session07name: VDWP07
+  session07date: "2018-02-17"
+  session07time: "09:30-16:30"
+  session07tutors: "Ian Sealy & Kieren Pitts"
+  session08name: VDWP08
+  session08date: "2018-02-20"
   session08time: "18:00-21:00"
-  session08tutors: "Peter Otto & Martina Schell"
-  session09name: WDUX09
-  session09date: "2017-12-02"
-  session09time: "09:30-16:30"
-  session09tutors: "Ian Sealy & Kieren Pitts"
-  session10name: WDUX10
-  session10date: "2017-12-05"
+  session08tutors: "Jonathan Fox & Ines Rebelo"
+  session09name: VDWP09
+  session09date: "2018-02-27"
+  session09time: "18:00-21:00"
+  session09tutors: "Jonathan Fox & Ines Rebelo"
+  session10name: VDWP10
+  session10date: "2018-03-06"
   session10time: "18:00-21:00"
-  session10tutors: "Peter Otto & Martina Schell"
-  session11name: WDUX11
-  session11date: "2017-12-12"
-  session11time: "18:00-21:00"
-  session11tutors: "Tim Priestman"
-  assignmentdate: "2018-02-09"
+  session10tutors: "Jonathan Fox & Ines Rebelo"
+  session11name: VDWP11
+  session11date: "2018-03-10"
+  session11time: "09:30-16:30"
+  session11tutors: "Ian Sealy & Kieren Pitts"
+  assignmentdate: "2018-04-10"
+
