@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+JPEG/PNG | Visual Design and Web Project - Birkbeck, University of London
+</title>
+        <link rel="stylesheet" href="/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+        <link rel="stylesheet" href="/s5/outline.css" type="text/css" media="screen" id="outlineStyle" />
+        <link rel="stylesheet" href="/s5/print.css" type="text/css" media="print" id="slidePrint" />
+        <link rel="stylesheet" href="/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+        <script src="/s5/slides.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="controls"></div>
+            <div id="currentSlide"></div>
+            <div id="header"></div>
+            <div id="footer">
+                <h1>Visual Design and Web Project</h1>
+                <h2>JPEG/PNG</h2>
+            </div>
+        </div>
+        <div class="presentation">
+            <div class="slide">
+                <h1>JPEG/PNG</h1>
+                <h2>Jonathan Fox</h2>
+            </div>
+            
+<div class="slide">
+    <h1>JPEG And PNG</h1>
+    <ul>
+        <li>JPEG (Joint Photographic Experts Group) is the format of choice for photographic images, images with continuous tone or images that require more than 256 colours.</li>
+        <li>PNG (Portable Network Graphic) also offers 24-bit colour and has other advantages over JPEG, notably transparency, but is not as widely supported by graphics software and browsers.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>JPEG</h1>
+    <p>When an image is converted to a JPEG the file is compressed. JPEG uses <a href="http://www.eetimes.com/electronics-news/4164456/Baseline-JPEG-compression-juggles-image-quality-and-size" target="_blank">DCT</a> (Discrete Cosine Transform) compression to reduce file size. This form of compression is based on the fact that the human eye is more sensitive to tonal changes in an image (brightness and contrast) than changes in colour. DCT compression splits colour and tonal information and compresses each separately.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>JPEG</h1>
+    <p>This means that:</p>
+    <ul>
+        <li>JPEG achieves greater compression on continuous tone images.</li>
+        <li>Not good at compressing images with extreme changes of colour and hard edges.</li>
+    </ul>
+    <div style="text-align: center; margin: 40px;">
+        <img src="jpeg-noise.gif" alt="JPEG noise" />
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>JPEG</h1>
+    <p>JPEG is 'lossy'. This means that:</p>
+    <ul>
+        <li>Information is lost in the conversion to JPEG.</li>
+        <li>All subsequent saves will also lose information.</li>
+        <li>It is, therefore, important to keep an original of any image you wish to edit in a 'non-lossy' file format.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+<div class="slide">
+    <h1>Progressive JPEG</h1>
+    <p>This variation of JPEG causes images to load into the Web page gradually rather than appearing only when the file is fully downloaded.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>PNG</h1>
+    <p>PNG supports:</p>
+    <ul>
+        <li>24-bit colour</li>
+        <li>8-bit colour</li>
+        <li>Lossless file compression</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>PNG</h1>
+    <p>This means that:</p>
+    <ul>
+        <li>High colour images can be be saved as 24-bit.</li>
+        <li>Images with fewer colours can be saved as 8-bit, making smaller files.</li>
+        <li>Images can be saved and resaved in the PNG format without loss of quality.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>PNG</h1>
+    <p>Disadvantages:</p>
+    <ul>
+        <li>There are a number of PNG browser support issues.</li>
+        <li>See a <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics#Web_browser_support_for_PNG" target="_blank">comprehensive list</a>.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+            <div class="slide"></div>
+        </div>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108227869-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108227869-1');
+</script>
+
+    </body>
+</html>

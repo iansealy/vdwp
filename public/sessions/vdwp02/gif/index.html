@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+GIF | Visual Design and Web Project - Birkbeck, University of London
+</title>
+        <link rel="stylesheet" href="/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+        <link rel="stylesheet" href="/s5/outline.css" type="text/css" media="screen" id="outlineStyle" />
+        <link rel="stylesheet" href="/s5/print.css" type="text/css" media="print" id="slidePrint" />
+        <link rel="stylesheet" href="/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+        <script src="/s5/slides.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="controls"></div>
+            <div id="currentSlide"></div>
+            <div id="header"></div>
+            <div id="footer">
+                <h1>Visual Design and Web Project</h1>
+                <h2>GIF</h2>
+            </div>
+        </div>
+        <div class="presentation">
+            <div class="slide">
+                <h1>GIF</h1>
+                <h2>Jonathan Fox</h2>
+            </div>
+            
+<div class="slide">
+    <h1>GIF</h1>
+    <p>GIF (Graphics Interchange Format) is the file format of choice for graphic images, text buttons, banners and photographic images with limited colour. GIF can support one level of transparency in images and also animation.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>GIF</h1>
+    <p>When an image is saved as a GIF the file size is compressed. GIF uses two compression techniques to reduce file size:</p>
+    <ul>
+        <li>CLUT (Colour Look-up Table)</li>
+        <li>LZW (Lempel-Ziv and Welch)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>CLUT - Colour Look-up Table</h1>
+    <p>GIF reduces the number of colours in an image to 256 (8-bit colour). It then stores these colours in a colour look-up table. This is called indexing. The table is saved along with the image and each pixel is indexed to a colour in the table.</p>
+    <div style="text-align: center; margin: 40px;">
+        <img src="penguin-clut.gif" alt="CLUT" />
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>LZW Compression</h1>
+    <p>This technique works by attempting to group pixels of a similar colour. Where it finds a group of similar pixels it remembers the first pixel x the number of adjacent pixels.</p>
+    <p>The image is read horizontally from top to bottom, consequently GIF will compress an image with horizontal stripes more successfully than an image with vertical stripes.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>LZW Compression</h1>
+    <div style="text-align: center;">
+        <img src="verstrip.gif" alt="Vertical stripes" />
+    </div>
+    File size - 2 kb
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>LZW Compression</h1>
+    <div style="text-align: center;">
+        <img src="horstrip.gif" alt="Horizontal stripes" />
+    </div>
+    File size - 380 bytes
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Colour Reduction Algorithms</h1>
+    <p>It is possible, in Photoshop and other applications, to choose how colours in the CLUT are selected. Photoshop offers a choice of 7 'palettes'. These are:</p>
+    <ul>
+        <li>Perceptual</li>
+        <li>Selective</li>
+        <li>Adaptive</li>
+        <li>Web</li>
+        <li>Custom</li>
+        <li>MacOS</li>
+        <li>Windows</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Dithering</h1>
+    <p>GIF offers an option that allows for extra colours in addition to those in the colour look-up table. It does this by dithering colours that are in the CLUT. If, for example, a CLUT contained only blue and yellow it may be able to create green by mixing/dithering blue and yellow pixels together.</p>
+    <div style="text-align: center;">
+        <img src="duck.gif" alt="Dither" />
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Variations Of GIF</h1>
+    <ul>
+        <li>GIF87a - supports one level of transparency and interlacing.</li>
+        <li>GIF89a - supports one level of transparency, interlacing and also animation.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+            <div class="slide"></div>
+        </div>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108227869-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108227869-1');
+</script>
+
+    </body>
+</html>
