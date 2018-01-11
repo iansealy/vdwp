@@ -1,0 +1,85 @@
+---
+title: "JPEG/PNG"
+date: 2017-10-13T10:23:41+01:00
+draft: false
+type: slides
+presenter: "Jonathan Fox"
+---
+
+<div class="slide">
+    <h1>JPEG And PNG</h1>
+    <ul>
+        <li>JPEG (Joint Photographic Experts Group) is the format of choice for photographic images, images with continuous tone or images that require more than 256 colours.</li>
+        <li>PNG (Portable Network Graphic) also offers 24-bit colour and has other advantages over JPEG, notably transparency, but is not as widely supported by graphics software and browsers.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>JPEG</h1>
+    <p>When an image is converted to a JPEG the file is compressed. JPEG uses <a href="http://www.eetimes.com/electronics-news/4164456/Baseline-JPEG-compression-juggles-image-quality-and-size" target="_blank">DCT</a> (Discrete Cosine Transform) compression to reduce file size. This form of compression is based on the fact that the human eye is more sensitive to tonal changes in an image (brightness and contrast) than changes in colour. DCT compression splits colour and tonal information and compresses each separately.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>JPEG</h1>
+    <p>This means that:</p>
+    <ul>
+        <li>JPEG achieves greater compression on continuous tone images.</li>
+        <li>Not good at compressing images with extreme changes of colour and hard edges.</li>
+    </ul>
+    <div style="text-align: center; margin: 40px;">
+        <img src="jpeg-noise.gif" alt="JPEG noise" />
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>JPEG</h1>
+    <p>JPEG is 'lossy'. This means that:</p>
+    <ul>
+        <li>Information is lost in the conversion to JPEG.</li>
+        <li>All subsequent saves will also lose information.</li>
+        <li>It is, therefore, important to keep an original of any image you wish to edit in a 'non-lossy' file format.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+<div class="slide">
+    <h1>Progressive JPEG</h1>
+    <p>This variation of JPEG causes images to load into the Web page gradually rather than appearing only when the file is fully downloaded.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>PNG</h1>
+    <p>PNG supports:</p>
+    <ul>
+        <li>24-bit colour</li>
+        <li>8-bit colour</li>
+        <li>Lossless file compression</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>PNG</h1>
+    <p>This means that:</p>
+    <ul>
+        <li>High colour images can be be saved as 24-bit.</li>
+        <li>Images with fewer colours can be saved as 8-bit, making smaller files.</li>
+        <li>Images can be saved and resaved in the PNG format without loss of quality.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>PNG</h1>
+    <p>Disadvantages:</p>
+    <ul>
+        <li>There are a number of PNG browser support issues.</li>
+        <li>See a <a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics#Web_browser_support_for_PNG" target="_blank">comprehensive list</a>.</li>
+    </ul>
+    <div class="handout"></div>
+</div>
