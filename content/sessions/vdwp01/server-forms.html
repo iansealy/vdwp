@@ -1,0 +1,217 @@
+---
+title: "Server-Side Scripting and Forms"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Ian Sealy"
+---
+
+<div class="slide">
+    <h1>Server-Side Scripting</h1>
+    <ul>
+        <li>So far have created static Web pages</li>
+        <li>Server-side scripting allows creating dynamic or interactive pages (e.g. database-driven pages)</li>
+        <li>Example:
+            <ul>
+                <li><a href="https://vehicleenquiry.service.gov.uk/" target="_blank">Vehicle Enquiry Service</a></li>
+                <li>Content is generated dynamically (from a database), rather than having a static page for every car</li>
+            </ul>
+        </li>
+        <li>Different to client-side scripting (e.g. <a href="https://www.gov.uk/foreign-travel-advice" target="_blank">Foreign Travel Advice</a>)</li>
+        <li>Code runs on server not in browser</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More Server-Side Scripting</h1>
+    <ul>
+        <li>Normally (i.e. for a static page) a requested file is sent back to the Web browser directly</li>
+        <li>With server-side scripting the requested file is executed as a program and that program's output is sent back to the Web browser</li>
+        <li>Server-side scripts can be written in any language that will run on the computer hosting the Web server (confusingly the computer hosting the Web server software is also often called a Web server)</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction" target="_blank">Introduction to the server side</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Languages</h1>
+    <p>Examples of programming languages often used to write server-side scripts:</p>
+    <ul>
+        <li>PHP</li>
+        <li>Python</li>
+        <li>Perl</li>
+        <li>Ruby</li>
+        <li>C#</li>
+        <li>Java</li>
+        <li>JavaScript (although also used for client-side programming)</li>
+    </ul>
+    <p><a href="https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites" target="_blank">Languages used on most popular sites</a></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Reusing Server-Side Scripts</h1>
+    <ul>
+        <li>Teaching any of these languages is beyond the scope of this course</li>
+        <li>Many Web developers never write their own scripts</li>
+        <li>Easy to reuse scripts that other people have written</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>What You Need</h1>
+    <ul>
+        <li>An area on your Web server where files are executed rather than just sent back directly</li>
+        <li>On the DreamHost server, server-side scripts can be run from any directory below htdocs and scripts just need to have the right file extension (e.g. .pl or .php)</li>
+        <li>Is also possible to use scripts hosted by a third party (but beware of advertising)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Example</h1>
+    <p>Example server-side script:</p>
+    <div style="margin: 20px;">
+        <code>
+            #!/usr/bin/perl<br />
+            use CGI qw(param);<br />
+            print&nbsp;&quot;Content-type:&nbsp;text/html\n\n&quot;;<br />
+            print&nbsp;&quot;&lt;html&gt;&lt;h1&gt;Hello&nbsp;&quot;,&nbsp;param('username'),&nbsp;&quot;&lt;/h1&gt;&lt;/html&gt;&quot;;
+        </code>
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Example</h1>
+    <ul>
+        <li>Is a Perl script</li>
+        <li>Located at <a href="http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl" target="_blank">http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl</a></li>
+        <li>Takes a parameter called &quot;username&quot; and displays the value of that parameter after &quot;Hello&quot;</li>
+        <li>Can pass parameter as part of URL</li>
+        <li><a href="http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl?username=Kieren" target="_blank">http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl?username=Kieren</a></li>
+        <li><a href="http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl?username=Ian" target="_blank">http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl?username=Ian</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Forms</h1>
+    <ul>
+        <li>Using URLs is one way of sending parameters to a server-side script, but most common way is probably to use forms</li>
+        <li>Forms are HTML that allow user to enter information and send it to the Web server</li>
+        <li>All forms are enclosed in <strong><code>&lt;form&gt;</code></strong> elements</li>
+        <li>The <strong><code>action</code></strong> attribute of form element points to server-side script</li>
+        <li>There are three basic elements within a form - <strong><code>&lt;input&gt;</code></strong>, <strong><code>&lt;select&gt;</code></strong> and <strong><code>&lt;textarea&gt;</code></strong></li>
+        <li>Other elements are necessary (e.g. <strong><code>&lt;label&gt;</code></strong> for accessibility)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Input Element</h1>
+    <div style="margin: 20px;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&gt;<br />
+            &lt;input&nbsp;type=&quot;text&quot;&nbsp;name=&quot;username&quot;&nbsp;size=&quot;10&quot;&gt;<br />
+            &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+            &lt;/form&gt;
+        </code>
+    </div>
+</div>
+
+<div class="slide">
+    <h1>More Input Element</h1>
+    <div style="margin: 20px;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&gt;<br />
+            &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name<br />
+            &lt;br /&gt;<br />
+            &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Kieren&quot;&gt;Kieren's&nbsp;first&nbsp;name<br />
+            &lt;br /&gt;<br />
+            &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&nbsp;Sealy&quot;&gt;Ian's&nbsp;full&nbsp;name<br />
+            &lt;br /&gt;<br />
+            &lt;input&nbsp;type=&quot;radio&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Kieren&nbsp;Pitts&quot;&gt;Kieren's&nbsp;full&nbsp;name<br />
+            &lt;br /&gt;<br />
+            &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+            &lt;/form&gt;
+        </code>
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Select Element</h1>
+    <div style="margin: 20px;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&gt;<br />
+            &lt;select&nbsp;name=&quot;username&quot;&gt;<br />
+            &lt;option&nbsp;value=&quot;Ian&quot;&gt;Ian's&nbsp;first&nbsp;name&lt;/option&gt;<br />
+            &lt;option&nbsp;value=&quot;Kieren&quot;&gt;Kieren's&nbsp;first&nbsp;name&lt;/option&gt;<br />
+            &lt;option&nbsp;value=&quot;Ian&nbsp;Sealy&quot;&gt;Ian's&nbsp;full&nbsp;name&lt;/option&gt;<br />
+            &lt;option&nbsp;value=&quot;Kieren&nbsp;Pitts&quot;&gt;Kieren's&nbsp;full&nbsp;name&lt;/option&gt;<br />
+            &lt;/select&gt;<br />
+            &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+            &lt;/form&gt;
+        </code>
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Textarea Element</h1>
+    <div style="margin: 20px;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&gt;<br />
+            &lt;textarea&nbsp;rows=&quot;10&quot;&nbsp;cols=&quot;40&quot;&nbsp;name=&quot;username&quot;&gt;&lt;/textarea&gt;<br />
+            &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+            &lt;/form&gt;
+        </code>
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Hidden Input Element</h1>
+    <div style="margin: 20px;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&gt;<br />
+            &lt;input&nbsp;type=&quot;hidden&quot;&nbsp;name=&quot;username&quot;&nbsp;value=&quot;Ian&quot;&gt;<br />
+            &lt;input&nbsp;type=&quot;submit&quot;&nbsp;value=&quot;Go&quot;&gt;<br />
+            &lt;/form&gt;
+        </code>
+    </div>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Method Attribute</h1>
+    <p>Two ways of accessing a server-side script. Determined by method attribute of form element.</p>
+    <h2>POST:</h2>
+    <div style="margin: 20px 0;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&nbsp;method=&quot;POST&quot;&gt;
+        </code>
+    </div>
+    <h2>GET:</h2>
+    <div style="margin: 20px 0;">
+        <code>
+            &lt;form&nbsp;action=&quot;http://iansealy.{{< shortsitename >}}{{< shortyear >}}.bbkweb.org/example.pl&quot;&nbsp;method=&quot;GET&quot;&gt;
+        </code>
+    </div>
+    <p>Which is used depends on server-side script. Can POST an unlimited amount of data. GET is limited.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Further Info</h1>
+    <ul>
+        <li><a href="http://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools HTML Forms Tutorial</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms" target="_blank">MDN HTML Forms Tutorial</a></li>
+        <li><a href="https://webaim.org/techniques/forms/" target="_blank">Creating Accessible Forms</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms" target="_blank">Styling Forms</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
