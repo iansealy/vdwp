@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+Introduction to JavaScript | Visual Design and Web Project - Birkbeck, University of London
+</title>
+        <link rel="stylesheet" href="/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+        <link rel="stylesheet" href="/s5/outline.css" type="text/css" media="screen" id="outlineStyle" />
+        <link rel="stylesheet" href="/s5/print.css" type="text/css" media="print" id="slidePrint" />
+        <link rel="stylesheet" href="/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+        <script src="/s5/slides.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="controls"></div>
+            <div id="currentSlide"></div>
+            <div id="header"></div>
+            <div id="footer">
+                <h1>Visual Design and Web Project</h1>
+                <h2>Introduction to JavaScript</h2>
+            </div>
+        </div>
+        <div class="presentation">
+            <div class="slide">
+                <h1>Introduction to JavaScript</h1>
+                <h2>Ian Sealy</h2>
+            </div>
+            
+<div class="slide">
+    <h1>What Is JavaScript?</h1>
+    <ul>
+        <li>A scripting language</li>
+        <li>Traditionally used on the client (i.e. Web browser) rather than the server</li>
+        <li>Allows interactivity without reloading the entire page (unlike server-side scripts)</li>
+        <li>Because there is no connection to the server, JavaScript can be fast and therefore allows instant interactivity (e.g. respond to mouse clicks or movement or typing)
+        <li>Examples:
+            <ul>
+                <li><a href="http://colinrcummings.github.io/daily_ui/018_analytics_chart" target="_blank">Yosemite Weather Trends</a></li>
+                <li><a href="http://mrdoob.com/projects/chromeexperiments/ball_pool/" target="_blank">Ball Pool</a></li>
+                <li><a href="http://hereistoday.com/" target="_blank">Here Is Today</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Aside: Java And JavaScript</h1>
+    <ul>
+        <li>JavaScript is a scripting language used on the Web</li>
+        <li>Java is a programming language used for a wide range of applications (which are not necessarily Web-related)</li>
+        <li>Java and JavaScript are completely different</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>History</h1>
+    <ul>
+        <li>JavaScript was developed by Netscape for Navigator, but was called Mocha and then later LiveScript</li>
+        <li>Was renamed JavaScript for marketing reasons (even though very different to Java)</li>
+        <li>Navigator 2.0 (1996) first supported JavaScript</li>
+        <li>Microsoft created its own version of JavaScript called JScript (Netscape owned the name)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More History</h1>
+    <ul>
+        <li>IE 3.0 (1996) first supported JScript, but was very different to JavaScript</li>
+        <li>Confusingly IE 3.0+ (until IE 11) also support a scripting language called VBScript, which is not supported by other browsers</li>
+        <li>Netscape, Microsoft and others collaborated with <a href="http://www.ecma-international.org/" target="_blank">ECMA</a> to create an official JavaScript specification called <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">ECMAScript</a></li>
+        <li>Browsers have been ECMAScript-compliant since Navigator 4.06 (JavaScript 1.3) and IE 4 (JScript 3.0+)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Where Is JavaScript?</h1>
+    <ul>
+        <li>
+            Can be embedded in an <a href="#" onclick="window.alert('Hi')">HTML tag</a> using event attributes (e.g. <code>onclick</code> and <code>onmouseover</code>):<br />
+            <strong>
+                <code>
+                    &lt;a href=&quot;#&quot; onclick=&quot;window.alert('Hi')&quot;&gt;HTML tag&lt;/a&gt;
+                </code>
+            </strong>
+        </li>
+        <li>
+            Can be embedded in a page using the <code>script</code> tag:<br />
+            <strong>
+                <code>
+                    &lt;script type=&quot;text/javascript&quot;&gt;<br />
+                    window.alert('Hi');<br />
+                    &lt;/script&gt;
+                </code>
+            </strong>
+        </li>
+        <li>
+            Can be included from an external file using the <code>script</code> tag:<br />
+            <strong>
+                <code>
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;example.js&quot;&gt;&lt;/script&gt;
+                </code>
+            </strong>
+        </li>
+    </ul>
+    <p>Latter is ideal because separates behaviour from content.</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Popup Window</h1>
+    <div style="margin: 40px;"><a href="#" onclick="window.open('window/', 'popup', 'width=400,height=300');">Popup</a></div>
+    <p>
+        <code>
+            &lt;a href=&quot;#&quot; onclick=&quot;window.open('window.html', 'popup', 'width=400,height=300');&quot;&gt;Popup&lt;/a&gt;
+        </code>
+    </p>
+    <p>But doesn't work with JavaScript switched off, so not graceful degradation</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Popup Window</h1>
+    <div style="margin: 40px;"><a href="window/" onclick="window.open('window/', 'popup', 'width=400,height=300'); return false;">Popup</a></div>
+    <p>
+        <code>
+            &lt;a href=&quot;window.html&quot; onclick=&quot;window.open('window.html', 'popup', 'width=400,height=300'); return false;&quot;&gt;Popup&lt;/a&gt;
+        </code>
+    </p>
+    <p>But URL is now duplicated, so hard to maintain</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Popup Window</h1>
+    <div style="margin: 40px;"><a href="window/" onclick="window.open(this.href, 'popup', 'width=400,height=300'); return false;">Popup</a></div>
+    <p>
+        <code>
+            &lt;a href=&quot;window.html&quot; onclick=&quot;window.open(this.href, 'popup', 'width=400,height=300'); return false;&quot;&gt;Popup&lt;/a&gt;
+        </code>
+    </p>
+    <p>But JavaScript (behaviour) is mixed with content, so still hard to maintain</p>
+    <p>Need to separate content and behaviour in the same way we separate content and presentation using CSS</p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Popup Window</h1>
+    <div style="margin: 40px;"><a href="window/" class="popup">Popup</a></div>
+    <script type="text/javascript">
+        window.onload = makePopups;
+        function makePopups() {
+            var links = document.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                if (links[i].getAttribute('class') == 'popup') {
+                    links[i].onclick = function() {
+                        window.open(this.getAttribute('href'), 'popup', 'width=400,height=300');
+                        return false;
+                    }
+                }
+            }
+            startup();
+        }
+    </script>
+    <p>
+        <code>
+            &lt;a href=&quot;window.html&quot; class=&quot;popup&quot;&gt;Popup&lt;/a&gt;
+        </code>
+    </p>
+    <p>
+        <code>
+            window.onload = makePopups;<br />
+            function makePopups() {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;var links = document.getElementsByTagName('a');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; links.length; i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (links[i].getAttribute('class') == 'popup') {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;links[i].onclick = function() {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.open(this.getAttribute('href'), 'popup', 'width=400,height=300');<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            }
+        </code>
+    </p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Problems With JavaScript</h1>
+    <ul>
+        <li>Like CSS, JavaScript does not always work the same in all browsers</li>
+        <li>And is a programming language, so harder to learn than HTML or CSS</li>
+        <li>Often overcome by using a JavaScript library, of which the most popular by far is <a href="http://jquery.com/" target="_blank">jQuery</a></li>
+        <li>Allows shorter, clearer syntax than standard JavaScript</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Popup Window</h1>
+    <div style="margin: 40px;"><a href="window/" class="popup2">Popup</a></div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('a.popup2').click(function() {
+            window.open($('a.popup2').attr('href'), 'popup', 'width=400,height=300');
+            return false;
+          });
+        });
+    </script>
+    <p>
+        <code>
+            &lt;a href=&quot;window.html&quot; class=&quot;popup&quot;&gt;Popup&lt;/a&gt;
+        </code>
+    </p>
+    <p>jQuery version:</p>
+    <code>
+        $(document).ready(function() {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;$('a.popup').click(function() {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.open($('a.popup').attr('href'), 'popup', 'width=400,height=300');<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;});<br />
+        });
+    </code>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Further Info</h1>
+    <ul>
+        <li>Tutorials:
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/Learn/JavaScript" target="_blank">MDN Tutorials</a></li>
+                <li><a href="http://learn.jquery.com/" target="_blank">jQuery Tutorials</a></li>
+                <li><a href="http://www.webteacher.com/javascript/" target="_blank">JavaScript for the Total Non-Programmer</a></li>
+                <li><a href="http://www.w3schools.com/js/" target="_blank">W3Schools JavaScript Tutorial</a></li>
+            </ul>
+        </li>
+        <li>Book:
+            <ul>
+                <li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
+            </ul>
+        </li>
+        <li>JavaScript scripts:
+            <ul>
+                <li><a href="https://www.npmjs.com/browse/keyword/jquery-plugin" target="_blank">jQuery Plugins on npm</a></li>
+                <li>Google, e.g. [jquery image carousel]</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+            <div class="slide"></div>
+        </div>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108227869-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108227869-1');
+</script>
+
+    </body>
+</html>
