@@ -1,0 +1,322 @@
+---
+title: "PHP"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Kieren Pitts"
+---
+
+<div class="slide">
+<h1>Web programming/development</h1>
+<ul>
+<li>Writing a computer program that runs on a Web server and does <em>something</em>...
+    <ul>
+    <li>e-commerce</li>
+    <li>Contact forms</li>
+    <li>Search</li>
+    <li>Blogging/CMSs</li>
+    <li>Generating images</li>
+    <li>Photo sharing</li>
+    <li>Web mail</li>
+    <li>anything else you can imagine etc, etc...</li>
+    </ul>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Why learn to program?</h1>
+<ul>
+<li>Fundamentally, it's a useful skill that you can apply in many places (not just web development)</li>
+<li>Promotes 'computational thinking' - how to break down problems into manageable chunks</li>
+<li>Learning new things makes you more employable</li>
+<li><a href="http://www.computingatschool.org.uk/" target="cas">Computing curriculum</a> was introduced in Sept 2014</li>
+<li><a href="https://www.codeclub.org.uk/" target="codeclub">Code Club</a></li>
+<li><a href="http://www.bbc.co.uk/cbeebies/games/nina-go-digital-game" target="nina">BBC CBeebies</a></li>
+<li>This session provides a very brief intro only, I can't teach you to program in one session ;-)</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>What language is best?</h1>
+<ul>
+<li><em>It doesn't matter</em>... sort of</li>
+<li>All have pros and cons and most programmers will tell you their language of choice is the best</li>
+<li>Considerations for Web development:
+<ul>
+<li>Server operating system (e.g. Linux/UNIX or Microsoft)</li>
+<li>Web server software (e.g. Apache, IIS, Nginx etc)</li>
+<li>Database software (MySQL, PostgreSQL)</li>
+<li>Cost (hosting and licences)</li>
+<li>Ease of setup</li>
+<li>Preference</li>
+</ul>
+</li>
+<li>Once you've learned to program in one language, learning a new language isn't hard</li>
+<li>Pick the best solution for a problem, don't feel like you have to use the same tool each time</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>What is PHP?</h1>
+<ul>
+<li>PHP - PHP: Hypertext Preprocessor (was: Personal Home Page)</li>
+<li>It's really popular:
+    <ul>
+    <li>Used by <a href="http://w3techs.com/technologies/overview/programming_language/all" target="w3techs">83% of all web sites</a></li>
+    </ul>
+</li>
+<li>Used for popular tools: WordPress, Drupal, Moodle, Joomla</li>
+<li>Used (amongst others) by: Facebook, Yahoo, Wikipedia, Wordpress.com, Flickr</li>
+<li><a href="http://blog.samuellevy.com/post/41-php-is-the-right-tool-for-the-job-for-all-the-wrong-reasons.html" target="setup">Easy to set up</a></li>
+<li>Integrated database support</li>
+<li>Not without its <a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/" target="bad-hammer">detractors</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Server-side processing</h1>
+<ul>
+<li>Recap of what happens on the server
+    <ol>
+    <li>Request sent to Web server</li>
+    <li>In the case of PHP, Web server runs PHP scripts using a PHP interpreter</li>
+    <li>Interpreter returns output from PHP script to Web server</li>
+    <li>Web server sends output to browser</li>
+    </ol>
+</li>
+<li>Unlike CGI scripts, you can mix HTML and PHP code in the same file... although most developers don't and prefer to keep them separate</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>PHP example</h1>
+<p>Filename: example.php</p>
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My first PHP page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;Some text here...&lt;/p&gt;
+
+&lt;?php
+// I'm a comment
+echo 'Hello World';
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Syntax basics</h1>
+<ul>
+<li>Script structure:
+<pre>
+    &lt;?php
+    
+    ?&gt;
+</pre>
+</li>
+<li><em>Most</em> lines must end with a semi-colon ;</li>
+<li>Variables - containers for storing data
+    <ul>
+		<li>Start with a $ and then a letter or underscore (not a number)</li>
+		<li>Variable names can only contain A-Za-z0-9_</li>
+		<li>Case sensitive</li>
+</ul></li>
+<li>Examples:
+    <ul>
+		<li>Integer<br />$n = 5;</li>
+		<li>Float<br />$pi = 3.1415;</li>
+		<li>String<br />$my_name = &quot;Kieren&quot;;</li>
+		<li>Boolean<br />$has_paid = true;</li>
+		<li>Don't have to declare the data type</li>
+	</ul>
+</li>
+<li>Comments: //, # or /* and */</li>
+<li>Echo - output some information:<br />
+echo &quot;&lt;p&gt;Hi there!&lt;/p&gt;&quot;;</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Operators</h1>
+
+<ul>
+<li>+, -, /, *</li>
+<li>assignment =</li>
+<li>equal ==</li>
+<li>identical ===
+<ul>
+<li>Use === if you want to check if two things are identical. If you use == then, for example, 0 and false are considered equal.</li>
+</ul>
+</li>
+<li>not equal !=</li>
+<li>not identical !==</li>
+<li>increment += or ++</li>
+<li>decrement -= or --</li>
+</ul>
+
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Arrays</h1>
+<ul>
+<li>Arrays are lists of 'things'</li>
+<li>Order of items is preserved</li>
+<li>Creating an array:<br />
+$colours = array(&quot;red&quot;,&quot;orange&quot;,&quot;green&quot;,&quot;blue&quot;);</li>
+<li>Accessing elements (zero-indexed)<br />
+$colours[0]; // red</li>
+<li>Number of items in array: count($colours);</li>
+<li>Add items: array_push($colours, &quot;white&quot;, &quot;black&quot;);</li>
+<li>Delete 1 item at index position 2 in the array: array_splice($colours, 2, 1);</li>
+<li>For debugging you can print the whole array: print_r($colours);</li>
+<li>Many <a href="http://uk3.php.net/manual/en/ref.array.php" target="phparray">array functions</a></li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Associative array/hash/dictionary</h1>
+<ul>
+<li>In PHP there's just one array type and you can use it as an integer indexed array or use other data types (e.g. strings) for the indices</li>
+<li>In other languages arrays/lists are different from dictionaries/associative arrays</li>
+<li>
+<pre>
+$price = array(
+	&quot;Cake&quot;=>&quot;2&quot;,
+	&quot;Jam&quot;=>&quot;1.50&quot;,
+	&quot;Biscuits&quot;=>&quot;0.5&quot;
+);
+</pre>
+</li>
+<li>Accessing elements<br />
+$price['Cake']; // 2</li>
+<li>Adding elements: $price['Sweets'] = &quot;0.2&quot;;</li>
+<li>Deleting elements: unset($price['Sweets']);</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>For loops</h1>
+<ul>
+<li>Counting to 5 from 0
+<pre>
+for ($x=0; $x&lt;=5; $x++) {
+	echo "The number is: $x&lt;br&gt;";
+}
+</pre>
+</li>
+<li>Looping over array
+<pre>
+$colours = array(&quot;red&quot;,&quot;orange&quot;,&quot;green&quot;,&quot;blue&quot;);
+foreach ($colours as $colour_name) {
+	echo $colour_name;
+}
+</pre>
+</li>
+<li>Looping over associative array
+<pre>
+$links = array(
+	&quot;Google&quot;=>&quot;http://www.google.com&quot;,
+	&quot;Yahoo!&quot;=>&quot;http://www.yahoo.com&quot;,
+	&quot;Bing&quot;=>&quot;http://www.bing.com&quot;
+);
+foreach ($links as $key => $value){
+    echo &quot;&lt;a href=\&quot;$value\&quot;&gt;$key&lt;/a&gt;&quot;;
+}
+</pre>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Conditionals</h1>
+<ul>
+<li>
+<pre>
+if (condition) {
+    // Code
+} elseif (condition2) {
+    // Code
+} else {
+    // Code
+}
+</pre>
+</li>
+<li>
+<pre>
+if ($x == 5) {
+    // Code to run if $x is 5
+}
+</pre>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Form data</h1>
+<ul>
+<li>Form in the HTML:<br />
+&lt;form action=&quot;example.php&quot; method=&quot;GET&quot;&gt;<br />
+&lt;input type=&quot;text&quot; name=&quot;your_name&quot;&gt;<br />
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br />
+&lt;/form&gt;
+</li>
+<li>Access the data in your 'example.php' PHP script<br />
+<pre>
+$_GET[&quot;your_name&quot;]
+</pre>
+</li>
+<li>An example of using the form data:
+<pre>
+&lt;?php
+if ($_GET[&quot;your_name&quot;] == 'Bob') {
+    echo &quot;Hi Bob, welcome back&quot;;
+} else {
+    echo &quot;Hello new visitor&quot;;
+}
+?&gt;
+</pre>
+</li>
+<li>If using POST then:<br />
+<pre>
+$_POST[&quot;your_name&quot;]
+</pre>
+</li>
+<li>Sanitise any data from users, e.g. remove anything that's not a character within these ranges A-Z, a-z or 0-9:<br />
+<pre>$sanitised_string = preg_replace(&quot;/[^A-Za-z0-9]/&quot;, '', $string);</pre>
+</li>
+</ul>
+<div class="handout">
+</div>
+</div>
