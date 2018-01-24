@@ -97,7 +97,7 @@ ALTER TABLE `movies` ADD `movie_id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KE
 
 http://kierenpitts.wdd1617.bbkweb.org/
 
-bbkdemo2016
+bbkdemo2018
 kierenpitts
 someotherpassword
 
@@ -115,7 +115,7 @@ movies|somepassword
 <ul>
 <li>Empty database already created on Dreamhost
 <ul>
-<li>Database: bbkdemo2017</li>
+<li>Database: bbkdemo2018</li>
 <li>Admin username: kierenpitts</li>
 <li>Script username: movies</li>
 </ul>
@@ -132,7 +132,7 @@ movies|somepassword
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://wdd1617-mysql.bbkweb.org" target="phpmy2">wdd1617-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://vdwp1718-mysql.bbkweb.org" target="phpmy2">vdwp1718-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
@@ -167,10 +167,10 @@ movies|somepassword
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1617-mysql.bbkweb.org&quot;;
+$hostname = &quot;vdwp1718-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2017&quot;;
+$database = &quot;bbkdemo2018&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -203,10 +203,10 @@ print &quot;&lt;/ul&gt;\n&quot;;
 &lt;?php
 
 // Connect to the database
-$hostname = &quot;wdd1617-mysql.bbkweb.org&quot;;
+$hostname = &quot;vdwp1718-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2017&quot;;
+$database = &quot;bbkdemo2018&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -259,10 +259,10 @@ while ($row = mysql_fetch_row($result)) {
 
 // Connect to the database
 // Normal kept in a separate file and used with include()
-$hostname = &quot;wdd1617-mysql.bbkweb.org&quot;;
+$hostname = &quot;vdwp1718-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
-$database = &quot;bbkdemo2017&quot;;
+$database = &quot;bbkdemo2018&quot;;
 
 $link = mysql_connect($hostname,$username,$password);
 mysql_select_db($database) or die(&quot;Unable to select database&quot;);
@@ -361,7 +361,7 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	<li>source control</li>
 	</ul>
 </li>
-<li>Example IDEs: <a href="http://www.eclipse.org/" target="eclipse">Eclipse</a>, <a href="https://www.jetbrains.com/phpstorm/" target="phpstorm">Phpstorm</a></li>
+<li>Example IDEs: <a href="http://www.eclipse.org/" target="eclipse">Eclipse</a>, <a href="https://www.jetbrains.com/phpstorm/" target="phpstorm">PhpStorm</a></li>
 <li>Database managment tools
 	<ul>
 	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmyad">phpMyAdmin</a></li>
