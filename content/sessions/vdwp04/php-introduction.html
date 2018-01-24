@@ -140,7 +140,15 @@ echo 'Hello World';
 		<li>Variable names can only contain A-Za-z0-9_</li>
 		<li>Case sensitive</li>
 </ul></li>
-<li>Examples:
+</ul>
+<div class="handout">
+</div>
+</div>
+
+<div class="slide">
+<h1>Syntax basics</h1>
+<ul>
+<li>Example variables:
     <ul>
 		<li>Integer<br />$n = 5;</li>
 		<li>Float<br />$pi = 3.1415;</li>
@@ -187,8 +195,7 @@ echo &quot;&lt;p&gt;Hi there!&lt;/p&gt;&quot;;</li>
 <li>Order of items is preserved</li>
 <li>Creating an array:<br />
 $colours = array(&quot;red&quot;,&quot;orange&quot;,&quot;green&quot;,&quot;blue&quot;);</li>
-<li>Accessing elements (zero-indexed)<br />
-$colours[0]; // red</li>
+<li>Accessing elements (zero-indexed): $colours[0]; // red</li>
 <li>Number of items in array: count($colours);</li>
 <li>Add items: array_push($colours, &quot;white&quot;, &quot;black&quot;);</li>
 <li>Delete 1 item at index position 2 in the array: array_splice($colours, 2, 1);</li>
@@ -308,6 +315,15 @@ if ($_GET[&quot;your_name&quot;] == 'Bob') {
 ?&gt;
 </pre>
 </li>
+</ul>
+<div class="handout">
+</div>
+</div>
+
+
+<div class="slide">
+<h1>Form data</h1>
+<ul>
 <li>If using POST then:<br />
 <pre>
 $_POST[&quot;your_name&quot;]
