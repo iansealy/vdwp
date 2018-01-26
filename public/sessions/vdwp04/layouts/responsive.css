@@ -1,0 +1,22 @@
+#container {
+    width: 100%;
+    max-width: none;
+    font-size: 1em; /* 16px x 1 = 16px */
+}
+
+#col1, #col3 {
+    display: none;
+}
+
+#col2 {
+    width: 98%;
+    padding: 0 1%;
+}
+
+ul#menu li a {
+    border: 1px solid #FFC043;
+}
+
+a {
+    font-size: 1.2em;
+}

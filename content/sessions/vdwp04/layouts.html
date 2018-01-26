@@ -1,0 +1,136 @@
+---
+title: "Layouts"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Ian Sealy"
+---
+
+<div class="slide">
+    <h1>Types of Layout</h1>
+    <p>Progression of layout development:</p>
+    <ul>
+        <li>Fixed width (px)</li>
+        <li>Fluid/liquid width (%)</li>
+        <li>Elastic width (em)</li>
+        <li>Responsive</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Basic HTML</h1>
+    <p>Create <a href="basic.html" target="_blank">basic HTML</a> for all layouts. For this, I've used:</p>
+    <ul>
+        <li><a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html" target="_blank">W3C template and DOCTYPE</a></li>
+        <li>YUI Reset CSS</li>
+        <li>Container, header, footer and three columns</li>
+        <li><a href="http://lorem-ipsum.perbang.dk/" target="_blank">Lorem ipsum placeholder text</a></li>
+        <li>Basic CSS with <a href="http://www.alistapart.com/articles/howtosizetextincss/" target="_blank">text sized in ems</a> and colours chosen with <a href="http://paletton.com/" target="_blank">paletton.com</a></li>
+        <li>Menus from <a href="http://css.maxdesign.com.au/listamatic/" target="_blank">Listamatic</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Fixed Width</h1>
+    <ul>
+        <li>Size in px</li>
+        <li>Easiest to develop</li>
+        <li>Can make sure content is optimal reading width (unless user changes font size)</li>
+        <li><a href="fixed.html" target="_blank">Example</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Fluid or Liquid Width</h1>
+    <ul>
+        <li>Size in %</li>
+        <li>Easy to develop</li>
+        <li><a href="fluid.html" target="_blank">Example</a></li>
+        <li>User has control of optimal reading width (but will they)</li>
+        <li><a href="fluidmax.html" target="_blank">Example</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Elastic Width</h1>
+    <ul>
+        <li>Size in em</li>
+        <li>Harder to develop</li>
+        <li>Width adapts to font size</li>
+        <li>But modern browsers support page zoom</li>
+        <li><a href="elastic.html" target="_blank">Example</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Aside: CSS3</h1>
+    <ul>
+        <li>Modular extension of CSS2.1</li>
+        <li>Some modules are finished and have wide support; others do not</li>
+        <li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation Service</a> defaults to CSS3</li>
+        <li>e.g. <a href="http://www.css3.info/preview/rounded-border/" target="_blank">border-radius</a> and <a href="http://www.creativebloq.com/discover-power-css3-selectors-10114257" target="_blank">selectors</a></li>
+        <li>CSS3 also introduced media queries - way of adapting CSS based on user agent characteristics (e.g. screen size)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Mobile Layout / Responsive Design</h1>
+    <ul>
+        <li>Could have separate site on subdomain (e.g. m.bbkweb.org)</li>
+        <li>But maintenance becomes harder, e.g. what about tablets?</li>
+        <li>Better to have design adapt to screen size</li>
+        <li><a href="http://www.alistapart.com/articles/responsive-web-design" target="_blank">Responsive Web Design</a> - a combination of fluid design (%), flexible images (width: 100%) and media queries</li>
+        <li><a href="responsive.html" target="_blank">Example</a></li>
+        <li>Better would be mobile-first design using min-width</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>RWD Examples and Patterns</h1>
+    <ul>
+        <li>
+            Examples:
+            <ul>
+                <li><a href="http://2012.dconstruct.org/" target="_blank">http://2012.dconstruct.org/</a></li>
+                <li><a href="http://www.goldenisles.com/" target="_blank">http://www.goldenisles.com/</a></li>
+            </ul>
+        </li>
+        <li>
+            Patterns:
+            <ul>
+                <li><a href="http://mediaqueri.es/" target="_blank">mediaqueri.es</a></li>
+                <li><a href="http://www.lukew.com/ff/entry.asp?1514" target="_blank">lukew.com</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Frameworks</h1>
+    <ul>
+        <li><a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a></li>
+        <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+        <li><a href="http://www.initializr.com/" target="_blank">Initializr</a></li>
+        <li><a href="bootstrap.html" target="_blank">Example</a></li>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Future</h1>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">Flexbox</a></li>
+        <li><a href="flexbox.html" target="_blank">Example</a></li>
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid</a></li>
+        <li>(<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids" target="_blank">Introduction to grids</a>)</li>
+        <li><a href="https://internetingishard.com/html-and-css/" target="_blank">Layout (and more) tutorials</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
