@@ -16,12 +16,11 @@ presenter: "Kieren Pitts"
 <li>No matter how many records you have, processed in the same way</li>
 </ul>
 </li>
-<li>Easier to repurpose/reuse data in different forms [<a href="http://www.amentsoc.org/events/" target="aesevents">AES events example</a>]</li>
+<li>Easier to repurpose/reuse data in different forms [<a href="http://www.amentsoc.org/events/" target="_blank">AES events example</a>]</li>
 </ul>
 <div class="handout">
 </div>
 </div>
-
 
 <div class="slide">
 <h1>Disadvantages</h1>
@@ -44,7 +43,6 @@ presenter: "Kieren Pitts"
 </div>
 </div>
 
-
 <div class="slide">
 <h1>LAMP</h1>
 <ul>
@@ -57,18 +55,17 @@ presenter: "Kieren Pitts"
 </ul>
 </li>
 <li>LAMP is a common setup but there are plenty of others.
-<ul><li>For local dev people often use <a href="http://www.wampserver.com/en/" target="wamp">WAMP</a> or <a href="http://www.mamp.info/en/index.html" target="mamp">MAMP</a></li></ul>
+<ul><li>For local dev people often use <a href="http://www.wampserver.com/en/" target="_blank">WAMP</a> or <a href="http://www.mamp.info/en/index.html" target="_blank">MAMP</a></li></ul>
 </li>
 </ul>
 <div class="handout">
 </div>
 </div>
 
-
 <div class="slide">
 <h1>Example Application</h1>
 <ul>
-<li>Create a Web site to display the movies in this <a href="../movies.csv">CSV file</a></li>
+<li>Create a Web site to display the movies in this <a href="movies.csv">CSV file</a></li>
 <li>Data structure, three fields/columns:
 <ul>
 <li>Title - varchar(200)</li>
@@ -78,6 +75,9 @@ presenter: "Kieren Pitts"
 </li>
 <li>11 records</li>
 </ul>
+<div class="handout">
+</div>
+</div>
 
 <!-- 
 
@@ -105,11 +105,6 @@ movies|somepassword
 
 -->
 
-<div class="handout">
-</div>
-</div>
-
-
 <div class="slide">
 <h1>Build and populate the database</h1>
 <ul>
@@ -121,18 +116,17 @@ movies|somepassword
 </ul>
 </li>
 <li>Need to create the &quot;movies&quot; table:<br />
-<img src="../mysql-table.png" alt="Diagram of the MySQL table we will create" width="267" height="222" style="margin-top : 5px;" />
+<img src="mysql-table.png" alt="Diagram of the MySQL table we will create" width="267" height="222" style="margin-top : 5px;" />
 </li>
 </ul>
 <div class="handout">
 </div>
 </div>
 
-
 <div class="slide">
 <h1>Build and populate the database - 2</h1>
 <ul>
-<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="phpmy">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://vdwp1718-mysql.bbkweb.org" target="phpmy2">vdwp1718-mysql.bbkweb.org</a>
+<li>We'll use <a href="http://www.phpmyadmin.net/home_page/" target="_blank">phpMyAdmin</a> - a Web-based tool for administering MySQL databases. Log in at: <a href="http://vdwp1718-mysql.bbkweb.org" target="_blank">vdwp1718-mysql.bbkweb.org</a>
 <ol>
 <li>Create table</li>
 <li>Import data</li>
@@ -159,14 +153,13 @@ movies|somepassword
 </div>
 </div>
 
-
 <div class="slide">
 <h1>Index Page</h1>
 <pre>
 &lt;?php
 
 // Connect to the database
-// Normal kept in a separate file and used with include()
+// Normally kept in a separate file and used with include()
 $hostname = &quot;vdwp1718-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
@@ -195,7 +188,6 @@ print &quot;&lt;/ul&gt;\n&quot;;
 <div class="handout">
 </div>
 </div>
-
 
 <div class="slide">
 <h1>Movie Page</h1>
@@ -230,12 +222,10 @@ while ($row = mysql_fetch_row($result)) {
 
 <div class="slide">
 <h1>Adding new records</h1>
-
 <ul>
 <li>User completes a form</li>
 <li>PHP processes the data from the form and inserts data into the database</li>
 </ul>
-
 <p>Example form:</p>
 <pre>
 &lt;form action=&quot;add_movie.php&quot; method=&quot;POST&quot;&gt;
@@ -258,7 +248,7 @@ while ($row = mysql_fetch_row($result)) {
 &lt;?php
 
 // Connect to the database
-// Normal kept in a separate file and used with include()
+// Normally kept in a separate file and used with include()
 $hostname = &quot;vdwp1718-mysql.bbkweb.org&quot;;
 $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
@@ -300,7 +290,6 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 </div>
 </div>
 
-
 <div class="slide">
 <h1>Advantages Revisited</h1>
 <ul>
@@ -311,7 +300,6 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 <div class="handout">
 </div>
 </div>
-
 
 <div class="slide">
 <h1>Disadvantages Revisited</h1>
@@ -341,10 +329,10 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	<li>model - maintaining the data</li>
 	<li>view - displaying the data</li>
 	<li>controller - controls events that affect data or display of data</li>
-        </ul>
+    </ul>
 </li>
-<li>Examples: <a href="https://laravel.com/" target="laravel">Laravel</a> (PHP), <a href="https://symfony.com/" target="symfony">Symfony</a> (PHP), <a href="http://cakephp.org/" target="cakephp">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="django">Django</a> (Python), <a href="http://flask.pocoo.org/" target="flask">Flask</a> (Python), <a href="http://www.perldancer.org/" target="dancer">Dancer</a> (Perl), <a href="http://rubyonrails.org/" target="ruby">Ruby on Rails</a> (Ruby)</li>
-<li>There are <a href="http://www.hotframeworks.com/" target="hotframe">lots of frameworks</a></li>
+<li>Examples: <a href="https://laravel.com/" target="_blank">Laravel</a> (PHP), <a href="https://symfony.com/" target="_blank">Symfony</a> (PHP), <a href="http://cakephp.org/" target="_blank">CakePHP</a> (PHP), <a href="https://www.djangoproject.com/" target="_blank">Django</a> (Python), <a href="http://flask.pocoo.org/" target="_blank">Flask</a> (Python), <a href="http://www.perldancer.org/" target="_blank">Dancer</a> (Perl), <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> (Ruby)</li>
+<li>There are <a href="http://www.hotframeworks.com/" target="_blank">lots of frameworks</a></li>
 </ul>
 <div class="handout">
 </div>
@@ -361,20 +349,20 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	<li>source control</li>
 	</ul>
 </li>
-<li>Example IDEs: <a href="http://www.eclipse.org/" target="eclipse">Eclipse</a>, <a href="https://www.jetbrains.com/phpstorm/" target="phpstorm">PhpStorm</a></li>
+<li>Example IDEs: <a href="http://www.eclipse.org/" target="_blank">Eclipse</a>, <a href="https://www.jetbrains.com/phpstorm/" target="_blank">PhpStorm</a></li>
 <li>Database managment tools
 	<ul>
-	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="phpmyad">phpMyAdmin</a></li>
-	<li><a href="http://www.mysql.com/products/workbench/" target="mysqlwb">MySQL Workbench</a></li>
-	<li><a href="https://dev.mysql.com/doc/refman/5.7/en/mysql.html" target="mysqlcli">MySQL Command line tool</a></li>
+	<li><a href="http://www.phpmyadmin.net/home_page/index.php" target="_blank">phpMyAdmin</a></li>
+	<li><a href="http://www.mysql.com/products/workbench/" target="_blank">MySQL Workbench</a></li>
+	<li><a href="https://dev.mysql.com/doc/refman/5.7/en/mysql.html" target="_blank">MySQL Command line tool</a></li>
 	</ul>
 </li>
 <li>Source control
 	<ul>
-	<li><a href="http://git-scm.com/" target="git">Git</a></li>
-        <li><a href="https://www.mercurial-scm.org/" target="alesi">Mercurial</a></li>
-        <li><a href="https://github.com/" target="gh">GitHub</a> - hosted service</li>
-        <li><a href="https://bitbucket.org/" target="bb">BitBucket</a> - hosted service</li>
+	<li><a href="http://git-scm.com/" target="_blank">Git</a></li>
+        <li><a href="https://www.mercurial-scm.org/" target="_blank">Mercurial</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a> - hosted service</li>
+        <li><a href="https://bitbucket.org/" target="_blank">BitBucket</a> - hosted service</li>
 	</ul>
 </li>
 </ul>
@@ -385,16 +373,16 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 <div class="slide">
 <h1>Reading</h1>
 <ul>
-<li><a href="http://sandbox.onlinephpfunctions.com/" target="phpsandbox">PHP Sandbox</a></li>
-<li><a href="http://www.w3schools.com/sql/" target="w3schoolssql">W3Schools SQL Tutorial</a></li>
-<li><a href="http://sqlzoo.net/" target="sqlzoo">SQLzoo - Interactive SQL Tutorial</a></li>
-<li><a href="http://php.net/" target="phpnet">PHP</a></li>
-<li><a href="http://www.w3schools.com/php/" target="w3schoolsphp">W3Schools PHP Tutorial</a></li>
-<li><a href="http://devzone.zend.com/6/php-101-php-for-the-absolute-beginner/" target="php101">PHP 101</a></li>
-<li><a href="http://www.python.org/about/gettingstarted/" target="startpy">Getting started with Python</a></li>
-<li><a href="http://www.perl.org/books/beginning-perl/" target="perl">Beginning Perl</a></li>
-<li><a href="http://www.railstutorial.org/book" target="railtuts">Ruby on Rails tutorials</a></li>
-<li><a href="http://railsforzombies.org/" target="zombie">Rails for zombies</a></li>
+<li><a href="http://sandbox.onlinephpfunctions.com/" target="_blank">PHP Sandbox</a></li>
+<li><a href="http://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a></li>
+<li><a href="http://sqlzoo.net/" target="_blank">SQLzoo - Interactive SQL Tutorial</a></li>
+<li><a href="http://php.net/" target="_blank">PHP</a></li>
+<li><a href="http://www.w3schools.com/php/" target="_blank">W3Schools PHP Tutorial</a></li>
+<li><a href="http://devzone.zend.com/6/php-101-php-for-the-absolute-beginner/" target="_blank">PHP 101</a></li>
+<li><a href="http://www.python.org/about/gettingstarted/" target="_blank">Getting started with Python</a></li>
+<li><a href="http://www.perl.org/books/beginning-perl/" target="_blank">Beginning Perl</a></li>
+<li><a href="http://www.railstutorial.org/book" target="_blank">Ruby on Rails tutorials</a></li>
+<li><a href="http://railsforzombies.org/" target="_blank">Rails for zombies</a></li>
 </ul>
 <div class="handout">
 </div>
