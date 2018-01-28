@@ -187,23 +187,28 @@ $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
 $database = &quot;bbkdemo2018&quot;;
 
-$link = mysql_connect($hostname,$username,$password);
-mysql_select_db($database) or die(&quot;Unable to select database&quot;);
+$link = mysqli_connect($hostname, $username, $password, $database);
+if (mysqli_connect_errno()) {
+   die(&quot;Connect failed: %s\n&quot; + mysqli_connect_error());
+   exit();
+}
 
 $sql ='SELECT movie_id, title FROM movies ORDER BY title';
 
 // run the query
-$result = mysql_query($sql,$link) or die(&quot;Unable to select: &quot;.mysql_error());
+$result = mysqli_query($link,$sql) or die(&quot;Unable to select: &quot;.mysql_error());
 
 print &quot;&lt;h1&gt;My movie list&lt;/h1&gt;\n\n&quot;;
 print &quot;&lt;ul&gt;\n&quot;;
-while ($row = mysql_fetch_row($result)) {
+while ($row = mysqli_fetch_row($result)) {
     list($movie_id, $title) = $row;
     print &quot;&lt;li&gt;&quot;;
     print &quot;&lt;a href=\&quot;movie.php?movie_id=$movie_id\&quot;&gt;$title&lt;/a&gt;&quot;;
     print &quot;&lt;/li&gt;\n&quot;;
 }
 print &quot;&lt;/ul&gt;\n&quot;;
+
+mysqli_close($link);
 
 ?&gt;
 </pre>
@@ -222,20 +227,31 @@ $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
 $database = &quot;bbkdemo2018&quot;;
 
-$link = mysql_connect($hostname,$username,$password);
-mysql_select_db($database) or die(&quot;Unable to select database&quot;);
+$link = mysqli_connect($hostname, $username, $password, $database);
+if (mysqli_connect_errno()) {
+   die(&quot;Connect failed: %s\n&quot; + mysqli_connect_error());
+   exit();
+}
 
-$sql = &quot;SELECT title, description, year FROM movies WHERE movie_id = &quot; . $_GET['movie_id'];
+$movie_id = preg_replace(&quot;/[^0-9]/&quot;, '', $_GET['movie_id']);
+if ($movie_id == '') {
+	// Missing data
+	print &quot;Missing or invalid data.&quot;;
+    return;
+}
+
+$sql = &quot;SELECT title, description, year FROM movies WHERE movie_id = &quot; . $movie_id;
 
 // run the query
-$result = mysql_query($sql,$link) or die(&quot;Unable to select: &quot;.mysql_error());
+$result = mysqli_query($link,$sql) or die(&quot;Unable to select: &quot;.mysql_error());
 
-while ($row = mysql_fetch_row($result)) {
+while ($row = mysqli_fetch_row($result)) {
     list($title, $description, $year) = $row;
     print &quot;&lt;h1&gt;$title ($year)&lt;/h1&gt;\n&quot;;
     print &quot;&lt;p&gt;$description&lt;/p&gt;\n&quot;;
 }
 
+mysqli_close($link);
 ?&gt;
 </pre>
 <div class="handout">
@@ -276,27 +292,30 @@ $username = &quot;movies&quot;;
 $password = &quot;somepassword&quot;;
 $database = &quot;bbkdemo2018&quot;;
 
-$link = mysql_connect($hostname,$username,$password);
-mysql_select_db($database) or die(&quot;Unable to select database&quot;);
+$link = mysqli_connect($hostname, $username, $password, $database);
+if (mysqli_connect_errno()) {
+   die(&quot;Connect failed: %s\n&quot; + mysqli_connect_error());
+   exit();
+}
 
 $movie_title = preg_replace(&quot;/[^A-Za-z0-9\-\! ]/&quot;, '', $_POST[&quot;title&quot;]);
 $movie_description = preg_replace(&quot;/[^A-Za-z0-9 \-\!\:\;\,\.\&quot;\']/&quot;, '', $_POST[&quot;description&quot;]);
 $movie_year = preg_replace(&quot;/[^0-9]/&quot;, '', $_POST[&quot;year&quot;]);
 
 // Make sure we have all the data
-if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
+if ($movie_title == '' || $movie_description == '' || $movie_year == '') {
 	// Missing data
 	print &quot;Missing or invalid data, please return to the form and check your entry.&quot;;
 } else {
 	// Escape data before inserting to prevent SQL injection
-	$movie_title = mysql_real_escape_string($movie_title);
-	$movie_description = mysql_real_escape_string($movie_description);
-	$movie_year = mysql_real_escape_string($movie_year);
+	$movie_title = mysqli_real_escape_string($link, $movie_title);
+	$movie_description = mysqli_real_escape_string($link, $movie_description);
+	$movie_year = mysqli_real_escape_string($link, $movie_year);
 	// Data is good so insert into database
 	$sql =&quot;INSERT INTO movies (title, description, year) VALUES ('$movie_title', '$movie_description', '$movie_year')&quot;;
 
 	// run the query
-	$result = mysql_query($sql,$link) or die(&quot;Unable to insert: &quot;.mysql_error());
+	$result = mysqli_query($link,$sql) or die(&quot;Unable to insert: &quot;.mysql_error());
 
 	if (!$result) {
 		print &quot;&lt;p&gt;We couldn't submit the data&lt;/p&gt;&quot;;
@@ -305,6 +324,8 @@ if ($movie_title == '' || $movie_description == '' ||$movie_year == '') {
 	}
 	print &quot;&lt;p&gt;Back to &lt;a href=\&quot;index.php\&quot;&gt;movie index&lt;/a&gt;&lt;/p&gt;&quot;;
 }
+
+mysqli_close($link);
 
 ?&gt;
 </pre>
