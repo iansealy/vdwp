@@ -1,0 +1,153 @@
+---
+title: "Version Control With Git"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Ian Sealy"
+---
+
+<div class="slide">
+    <h1>Why Version Control?</h1>
+    <ul>
+        <li>If you end up with files or directories like...
+    <ul>
+        <li><tt>logo.png.bak</tt></li>
+        <li><tt>logo.png.bak2</tt></li>
+        <li><tt>index.html.2018-01-03</tt></li>
+        <li><tt>vdwp7.latest</tt></li>
+        <li><tt>vdwp7.2018-02-17b</tt></li>
+    </ul>
+</li>
+        <li>Or you make changes and want to revert to the original, but don't remember what you changed...</li>
+        <li>Or you want multiple people to edit the same set of files...</li>
+        <li>Then you need version control</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Advantages Of Version Control</h1>
+    <ul>
+        <li><strong>Restore:</strong> You can revert back to the previous state of a file (or files) at any point in time</li>
+        <li><strong>Undo:</strong> Throw away changes and revert to last known good version of file</li>
+        <li><strong>History:</strong> Add comments to each change saying why the change was made</li>
+        <li><strong>Ownership:</strong> Changes are associated with people (who can be blamed or credited)</li>
+        <li><strong>Synchronisation:</strong> Multiple people can edit same files and stay up to date</li>
+        <li><strong>Branching and merging:</strong> Make changes to separate copy of files and merge later</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Concepts</h1>
+    <ul>
+        <li><strong>Repository:</strong> The database of files (including all versions)</li>
+        <li><strong>Revision:</strong> A version of a file in the repository</li>
+        <li><strong>Working Copy:</strong> The set of files that one person works on</li>
+        <li><strong>Add:</strong> Putting a new file into the repository so it's tracked and under version control</li>
+        <li><strong>Checkout:</strong> Getting a file from the repository</li>
+        <li><strong>Checkin or Commit:</strong> Adding a new revision of a file to the repository</li>
+        <li><strong>Commit Message:</strong> A description of a set of changes</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More Concepts</h1>
+    <ul>
+        <li><strong>Update or Fetch:</strong> Get the latest revisions from another repository</li>
+        <li><strong>Revert:</strong> Discard changes and replace with the latest revision from the repository</li>
+        <li><strong>Diff:</strong> The changes between two revisions of a file</li>
+        <li><strong>Master or Trunk:</strong> The primary baseline set of files in the repository</li>
+        <li><strong>Branch:</strong> Making a copy of all the files for editing</li>
+        <li><strong>Merge:</strong> Merging two sets of changes together</li>
+        <li><strong>Conflict:</strong> When changes can't be merged automatically</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Typical Scenario</h1>
+    <ul>
+        <li>Ian <strong>adds</strong> <tt>index.html</tt> to the <strong>repository</strong></li>
+        <li>Kieren <strong>checks out</strong> the repository, changes the <tt>h1</tt> tag of <tt>index.html</tt> and <strong>commits</strong> the new <strong>revision</strong> with a <strong>commit message</strong> of &quot;New title&quot;</li>
+        <li>Ian <strong>updates</strong> his <strong>working copy</strong> from the repository and sees Kieren has made a change</li>
+        <li>Ian does a <strong>diff</strong> to see what Kieren changed</li>
+        <li>Ian makes a new <strong>branch</strong></li>
+        <li>Ian commits lots of changes to <tt>index.html</tt> in his branch over the next week</li>
+        <li>Kieren commits a change to <tt>index.html</tt> during that week</li>
+        <li>Ian <strong>merges</strong> his branch into the <strong>master</strong> and resolves a <strong>conflict</strong> between his changes and Kieren's change</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>History</h1>
+    <ul>
+        <li>Local version control systems (e.g. rcs)</li>
+        <li>Centralised version control systems (e.g. cvs or svn)</li>
+        <li>Distributed version control systems (e.g. git)</li>
+        <li>Git created in 2005 by Linus Torvalds (creator of Linux)</li>
+        <li>Git now the most commonly used version control system for Web development</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Hosting</h1>
+    <ul>
+        <li>Centralised hosting repositories (e.g. <a href="https://github.com/" target="_blank">GitHub</a> or <a href="https://bitbucket.org/" target="_blank">Bitbucket</a>) - give you nice tools and backups
+        <li>GitHub is largest code hoster (67 million repositories &amp; 24 million developers)</li>
+        <li>GitHub offers unlimited open repositories but private repositories require payment</li>
+        <li>Bitbucket offers unlimited free private repositories</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Installing Git</h1>
+    <ul>
+        <li><a href="https://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a></li>
+        <li>Can install GUI client, but recommend command line version</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Demo</h1>
+    <ul>
+        <li>Git command line demo
+            <ul>
+                <li>git init</li>
+                <li>git status</li>
+                <li>git add [file]</li>
+                <li>git commit -m "[message]"</li>
+                <li>git log</li>
+                <li>git diff</li>
+                <li>git branch [branch]</li>
+                <li>git checkout [branch]</li>
+                <li>git checkout master</li>
+                <li>git merge [branch]</li>
+                <li>git branch -d [branch]</li>
+            </ul>
+        </li>
+        <li><a href="https://try.github.io/" target="_blank">try.github.io</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Demo</h1>
+    <ul>
+        <li>GitHub demo
+            <ul>
+                <li><a href="https://github.com/new" target="_blank">Create repository</a></li>
+                <li>git remote add origin [repository]</li>
+                <li>git push -u origin master</li>
+                <li>git pull</li>
+                <li>git push</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
