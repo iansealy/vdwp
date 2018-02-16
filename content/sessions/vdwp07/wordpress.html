@@ -6,21 +6,20 @@ type: slides
 presenter: "Kieren Pitts"
 ---
 <div class="slide">
-<h1>WordPress</h1>
-
-<ul>
-<li>Started life as a blogging tool in 2003</li>
-<li>Developed into a feature-rich CMS
+    <h1>WordPress</h1>
     <ul>
-    <li>Current version: 4.9.4 (February 2018)</li>
+        <li>Started life as a blogging tool in 2003</li>
+        <li>Developed into a feature-rich CMS
+            <ul>
+                <li>Current version: 4.9.4 (February 2018)</li>
+            </ul>
+        </li>
+        <li>Used by over 29% of &quot;top 10 million&quot; websites and 60 million sites in total (<a href="http://en.wikipedia.org/wiki/WordPress" target="_blank">source</a>)</li>
+        <li>Over <a href="https://wordpress.org/plugins/" target="_blank">54,000+ plugins</a></li>
+        <li>Thousands of <a href="http://wordpress.org/themes/" target="_blank">themes</a></li>
+        <li><a href="https://wordpress.com" target="_blank">WordPress.com</a> - hosted blogging service</li>
+        <li><a href="https://wordpress.org" target="_blank">WordPress.org</a> - blogging software</li>
     </ul>
-</li>
-<li>Used by over 29% of &quot;top 10 million&quot; websites and 60 millions sites in total (<a href="http://en.wikipedia.org/wiki/WordPress" target="_blank">source</a>)</li>
-<li>Over <a href="https://wordpress.org/plugins/" target="_blank">54,000+ plugins</a></li>
-<li>Thousands of <a href="http://wordpress.org/themes/" target="_blank">themes</a></li>
-<li><a href="https://wordpress.com" target="_blank">WordPress.com</a> - hosted blogging service</li>
-<li><a href="https://wordpress.org" target="_blank">WordPress.org</a> - blogging software</li>
-</ul>
 <!--
 1314examplecms1
 1314examplecms2
@@ -28,99 +27,75 @@ wdd1617cms
 7thjune
 wdd1617-mysql.bbkweb.org
 -->
-<div class="handout">
-</div>
+    <div class="handout"></div>
 </div>
 
 <div class="slide">
-<h1>WordPress requirements</h1>
-
-<ul>
-<li>PHP 7.2 or greater</li>
-<li>MySQL 5.6 or greater OR MariaDB 10.0 or greater</li>
-<li>Nginx or Apache with mod_rewrite module</li>
-</ul>
-
-<div class="handout">
+    <h1>WordPress requirements</h1>
+    <ul>
+        <li>PHP 7.2 or greater</li>
+        <li>MySQL 5.6 or greater OR MariaDB 10.0 or greater</li>
+        <li>Nginx or Apache with mod_rewrite module</li>
+    </ul>
+    <div class="handout"></div>
 </div>
-</div>
-
 
 <div class="slide">
-<h1>Example WordPress installation</h1>
-
-<p><a href="https://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Installation" target="_blank">Famous 5 minute installation</a></p>
-
-<p>Steps:</p>
-
-<ol>
-  <li>Set up database (done)</li>
-  <li><a href="https://wordpress.org/download/" target="_blank">Download WordPress</a></li>
-  <li>Edit config files to include database connection settings</li>
-  <li>Upload files to the server</li>
-  <li>Visit site and set up a user</li>
-</ol>
-
-<div class="handout">
+    <h1>Example WordPress installation</h1>
+    <p><a href="https://codex.wordpress.org/Installing_WordPress#Famous_5-Minute_Installation" target="_blank">Famous 5 minute installation</a></p>
+    <p>Steps:</p>
+    <ol>
+        <li>Set up database (done)</li>
+        <li><a href="https://wordpress.org/download/" target="_blank">Download WordPress</a></li>
+        <li>Edit config files to include database connection settings</li>
+        <li>Upload files to the server</li>
+        <li>Visit site and set up a user</li>
+    </ol>
+    <div class="handout"></div>
 </div>
-</div>
-
 
 <div class="slide">
-<h1>WordPress demonstration</h1>
-
-<ul>
-  <li>Create pages</li>
-  <li>Create posts</li>
-  <li>Slugs</li>
-  <li>Users</li>
-  <li>Themes</li>
-</ul>
-
-<div class="handout">
-</div>
+    <h1>WordPress demonstration</h1>
+    <ul>
+        <li>Create pages</li>
+        <li>Create posts</li>
+        <li>Slugs</li>
+        <li>Users</li>
+        <li>Themes</li>
+    </ul>
+    <div class="handout"></div>
 </div>
 
 
 <div class="slide">
-<h1>Creating a WordPress theme</h1>
-
-<p>Using <a href="https://underscores.me/" target="_blank">Underscores (_s) theme from Automattic</a> as a base.</p>
-
-<ol>
-    <li>Download _s theme</li>
-    <li>Unzip files</li>
-    <li>Install theme on your WordPress site
-        <ul>
-        <li>FTP to: {blog_directory}/wp-content/themes/</li>
-        <li>Go to 'Appearance &gt; Themes' in WordPress admin area</li>
-        <li>Activate your theme</li>
-        </ul>
-    </li>
-</ol>
-<div class="handout">
+    <h1>Creating a WordPress theme</h1>
+    <p>Using <a href="https://underscores.me/" target="_blank">Underscores (_s) theme from Automattic</a> as a base.</p>
+    <ol>
+        <li>Download _s theme</li>
+        <li>Unzip files</li>
+        <li>Install theme on your WordPress site
+            <ul>
+                <li>FTP to: {blog_directory}/wp-content/themes/</li>
+                <li>Go to 'Appearance &gt; Themes' in WordPress admin area</li>
+                <li>Activate your theme</li>
+            </ul>
+        </li>
+    </ol>
+    <div class="handout"></div>
 </div>
-</div>
-   
-   
 
 <div class="slide">
-<h1>Customising your theme</h1>
-    
-<ol>
-    <li>Edit files locally</li>
-    <li>Upload changed files</li>
-    <li>Review site</li>
-</ol>
-
-<p>Reference</p>
-
-<ul>
-    <li><a href="https://developer.wordpress.org/themes/basics/template-files/" target="_blank">Template files</a></li>
-    <li><a href="https://developer.wordpress.org/themes/basics/template-files/" target="_blank">Function reference</a></li>
-</ul>
-
-
+    <h1>Customising your theme</h1>
+    <ol>
+        <li>Edit files locally</li>
+        <li>Upload changed files</li>
+        <li>Review site</li>
+    </ol>
+    <p>Reference</p>
+    <ul>
+        <li><a href="https://developer.wordpress.org/themes/basics/template-files/" target="_blank">Template files</a></li>
+        <li><a href="https://developer.wordpress.org/themes/basics/template-files/" target="_blank">Function reference</a></li>
+    </ul>
 <!--
 Info
 https://themeshaper.com/2012/02/13/introducing-the-underscores-theme/
@@ -128,10 +103,6 @@ https://themeshaper.com/2012/02/21/getting-started-with-the-underscores-theme/
 http://buildwpyourself.com/how-to-build-a-wordpress-theme-part-1-theme-files/
 https://torquemag.io/2017/08/beginners-guide-to-creating-a-theme-underscores/
 http://qnimate.com/developing-wordpress-themes-using-underscores/
-
 -->
-
-
-<div class="handout">
-</div>
+    <div class="handout"></div>
 </div>
