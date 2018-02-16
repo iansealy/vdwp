@@ -1,0 +1,101 @@
+---
+title: "Cross-Browser Compatibility"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Ian Sealy"
+---
+
+<div class="slide">
+    <h1>Introduction</h1>
+    <ul>
+        <li>Best method to avoid browser incompatibilities is to develop using Web standards</li>
+        <li>Even then can still get differences</li>
+        <li>Recommend developing using a highly standards-compliant browser (personally Chrome or Firefox) and then fix problems in IE</li>
+        <li>[Focusing on CSS differences (style); for JavaScript differences (behaviour) advise using a JavaScript library, like jQuery]</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Tools</h1>
+    <p>Tools to aid Web development:</p>
+    <ul>
+        <li><a href="http://chrispederick.com/work/web-developer/" target="_blank">Web Developer</a> (Firefox extension and now Chrome and Opera)</li>
+        <li>Firefox, Chrome &amp; Edge DevTools</li>
+        <li>Opera Dragonfly</li>
+        <li>Safari Web Inspector</li>
+        <li>IE8+ Tools</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>More Tools</h1>
+    <p>Testing in other browsers:</p>
+    <ul>
+        <li><a href="http://netrenderer.com/" target="_blank">IE NetRenderer</a> (free)</li>
+        <li><a href="http://browsershots.org/" target="_blank">Browsershots</a> (free)</li>
+        <li><a href="http://www.browserstack.com/" target="_blank">BrowserStack</a> (not free)</li>
+        <li><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/" target="_blank">IE &amp; Edge Virtual Machines</a> (free)</li>
+        <li><a href="http://litmusapp.com/" target="_blank">Litmus</a> (not free; email testing)</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Valid HTML And CSS</h1>
+    <ul>
+        <li>Invalid HTML or CSS often causes inconsistencies</li>
+        <li>Solution: Validate HTML and CSS before investigating other causes</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Reset CSS</h1>
+    <ul>
+        <li>Different browsers have different default CSS</li>
+        <li>Solution: Use Reset CSS (e.g. <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">Eric Meyer's</a>) or <a href="http://necolas.github.io/normalize.css/" target="_blank">normalize.css</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Quirks Mode</h1>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode" target="_blank">Quirks mode</a> emulates behaviour of old browsers for backwards compatibility</li>
+        <li>Many differences between quirks mode and standards mode</li>
+        <li>Most commonly noticed difference is due to different <a href="http://www.quirksmode.org/css/box.html" target="_blank">box models</a></li>
+        <li><a href="box-quirks.html" target="_blank">Example</a></li>
+        <li>Solution: Always use a DOCTYPE that forces standards mode</li>
+        <li><a href="box-standards.html" target="_blank">Fixed example</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Almost Standards Mode</h1>
+    <ul>
+        <li>Most DOCTYPEs actually force almost standards mode rather than standards mode</li>
+        <li>In standards mode, default for images is <code>display: inline;</code>, so small space appears below</li>
+        <li><a href="img-inline.html" target="_blank">Example</a></li>
+        <li>Solution: <code>display: block;</code></li>
+        <li><a href="img-block.html" target="_blank">Fixed example</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Modernizr</h1>
+    <ul>
+        <li>Gradual implementation of HTML5 and CSS3 by browsers means not all features implemented in all browsers</li>
+        <li>Solution: Use <a href="http://modernizr.com/" target="_blank">Modernizr</a></li>
+        <li><a href="modernizr.html" target="_blank">Example</a></li>
+        <li>Tests for features and creates a JavaScript object and adds classes to <code>html</code> tag indicating which features are supported</li>
+        <li>Can write different JavaScript and CSS depending on whether features are available</li>
+        <li>JavaScript <a href="https://en.wikipedia.org/wiki/Polyfill_(programming)" target="_blank">polyfills</a> implement features in browsers that don't natively support them</li>
+        <li><a href="http://caniuse.com/" target="_blank">Can I use</a></li>
+    </ul>
+    <div class="handout"></div>
+</div>
