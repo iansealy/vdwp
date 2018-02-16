@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+Content Management Systems | Visual Design and Web Project - Birkbeck, University of London
+</title>
+        <link rel="stylesheet" href="/s5/slides.css" type="text/css" media="projection" id="slideProj" />
+        <link rel="stylesheet" href="/s5/outline.css" type="text/css" media="screen" id="outlineStyle" />
+        <link rel="stylesheet" href="/s5/print.css" type="text/css" media="print" id="slidePrint" />
+        <link rel="stylesheet" href="/s5/opera.css" type="text/css" media="projection" id="operaFix" />
+        <script src="/s5/slides.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="controls"></div>
+            <div id="currentSlide"></div>
+            <div id="header"></div>
+            <div id="footer">
+                <h1>Visual Design and Web Project</h1>
+                <h2>Content Management Systems</h2>
+            </div>
+        </div>
+        <div class="presentation">
+            <div class="slide">
+                <h1>Content Management Systems</h1>
+                <h2>Kieren Pitts</h2>
+            </div>
+            
+<div class="slide">
+    <h1>What is a Content Management System?</h1>
+    <p>Working definition:</p>
+    <p><em>Web-based software used to publish and maintain <strong>content</strong> on a Web site.</em></p>
+    <ul>
+        <li>Web-based software - log in and make changes just using your browser</li>
+        <li>Maintaining content - design work done separately</li>
+        <li>Not always used for the whole site</li>
+    </ul>
+    <p>There are literally hundreds of CMS tools but the big three are: <a href="https://wordpress.org/" target="_blank">WordPress</a>, <a href="https://www.drupal.org/" target="_blank">Drupal</a> and <a href="https://www.joomla.org/" target="_blank">Joomla</a></p>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Work flow comparison - hand coding</h1>
+    <p><em>Creating a new page...</em></p>
+    <p>Hand coding:</p>
+    <ol>
+        <li>Create HTML file locally by marking up content</li>
+        <li>Edit other files locally to create links to your new page</li>
+        <li>Update SSIs to include page in nav or sub-nav</li>
+        <li>FTP the changed, and new, files (including any images) to your web space</li>
+    </ol>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Work flow comparison - using a CMS</h1>
+    <p>Kieren's description of using a CMS:</p>
+    <ol>
+        <li>Log in to software hosted on server</li>
+        <li>Paste/type in your content using online editor (usually WYSIWYG)</li>
+        <li>Upload any images (often using the same editor)</li>
+        <li>Nav/sub-nav links generated</li>
+        <li>Add links from other pages</li>
+    </ol>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Common features of a CMS:</h1>
+    <ul>
+        <li>Create and maintain content through the web
+            <ul>
+                <li>Little or no HTML/CSS skills needed to edit content</li>
+                <li>Edit the page content</li>
+                <li>Limited control over design</li>
+                <li>Limited control over functionality</li>
+            </ul>
+        </li>
+         <li>Storage of content (usually in a database):
+            <ul>
+                <li>Some linking can be automatic</li>
+                <li>Nav elements and site maps are automatically generated</li>
+            </ul>
+        </li>
+        <li>Edit content whenever you have an Internet connection</li>
+        <li>Preview page before publishing</li>
+        <li>Templating</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Common features of a CMS continued:</h1>
+    <ul>
+        <li>Version control/work flow/audit trails/roll back</li>
+        <li>Access control - only certain users can access a specific area</li>
+        <li>Site search</li>
+        <li>User registration and commenting</li>
+        <li>Plugins/extensibility
+            <ul>
+                <li><a href="https://drupal.org/project/project_module" target="_blank">39,000+ Drupal modules</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Downsides of a CMS</h1>
+    <ul>
+        <li>Software tie-in
+            <ul>
+                <li>Upgrades and patches</li>
+                <li>What about plugins/extensions?</li>
+                <li><a href="https://www.arvixe.com/active_cms_hosting" target="_blank">Will your chosen CMS last?</a></li>
+            </ul>
+        </li>
+        <li>Requires a database
+            <ul>
+                <li>Harder to keep local/dev copy in sync</li>
+                <li>Hosting cost</li>
+                <li>Performance</li>
+                <li>Back-ups</li>
+            </ul>
+        </li>
+        <li>Requires an Internet connection</li>
+        <li>Management of content other than web pages not so good (e.g. PDFs)</li>
+        <li>Configuration can be time consuming</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Downsides of a CMS continued</h1>
+    <ul>
+        <li>CMSs do lots of things well but rarely do everything you want:
+            <ul>
+                <li>Find a different CMS</li>
+                <li>Look for a module or plugin</li>
+                <li>Write the code yourself</li>
+            </ul>
+        </li>
+        <li>You can outgrow the software:
+            <ul>
+                <li><a href="http://www.open.ac.uk/blogs/bioobsprojblog/2013/05/22/progress/front-end-framework-selection/" target="_blank">iSpot and Drupal</a></li>
+                <li>Requirements change</li>
+                <li>'One size' does not fit all</li>
+                <li>You may need a framework and not a CMS</li>
+            </ul>
+        </li>
+        <li>They aren't a 'magic bullet'</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Alternatives to 'heavyweight' CMSs</h1>
+    <p>Increasing popularity of static site generators such as:</p>
+    <ul>
+        <li><a href="https://jekyllrb.com/">Jekyll</a></li>
+        <li><a href="https://gohugo.io/">Hugo</a></li>
+    </ul>
+    <p>Many of the benefits of a CMS without the technical requirements on the server.</p>
+    <p>Process:</p>
+    <ol>
+        <li>Set up templates</li>
+        <li>Repeated/common areas stored in single files (a little like SSIs)</li>
+        <li>Content written in HTML or Markdown</li>
+        <li>Site generated by running a command</li>
+        <li>Files uploaded to the server</li>
+    </ol>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>How are you likely to work with a CMS?</h1>
+    <p><strong>The brief</strong>: Your client wants to be able to update their website after you've delivered it.</p>
+    <ul>
+        <li>You install and set up the CMS for a client
+            <ul>
+                <li>You may need to explain the hosting requirements and extra cost to the client</li>
+            </ul>
+        </li>
+        <li>You convert your design (or someone else's) into the templates required by your CMS</li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Converting your design</h1>
+        <ul>
+            <li>You need to understand the HTML, CSS and JavaScript</li>
+            <li>You need to understand the templating system of your chosen CMS</li>
+            <li>You will often need to make changes to the mark-up to include CMS specific code (for the nav etc)</li>
+            <li>You may need different templates for different sections of the site</li>
+            <li>You may need to write some code (e.g. PHP) to meet the client's requirements</li>
+            <li>For tools like WordPress it's best to start with a simple, theme developed by someone else. For example the <a href="https://underscores.me/" target="_blank">Underscores (_s) theme from Automattic</a></li>
+            <li><em>This is where your hand-coding, design and programming skills come in!</em></li>
+        </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Content upload and delivery</h1>
+    <ul>
+        <li>You may do the initial content upload</li>
+        <li>You may train the client in using the CMS</li>
+        <li>At some point the day-to-day running is handed over to the client</li>
+        <li>Maintenance:
+            <ul>
+                <li>Doing upgrades and installing patches</li>
+                <li>Adapting the templates for new site sections</li>
+                <li>Adapting the templates when the client decides they want a different style of page</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+<div class="slide">
+    <h1>Retrofitting a CMS</h1>
+    <ul>
+        <li>You have a static site you want to maintain using a CMS
+            <ul>
+                <li>Create your templates</li>
+                <li>Update your mark-up and CSS to work with the CMS</li>
+                <li>Move content - populate the right content areas in the template</li>
+                <li>Move all the other files (anything that's not a web page)</li>
+            </ul>
+        </li>
+        <li>Some of the lighter weight CMSs make migration easier:
+            <ul>
+                <li><a href="http://grabaperch.com/features#existing-site" target="_blank">Perch</a></li>
+                <li><a href="http://www.cushycms.com/en" target="_blank">CushyCMS</a></li>
+            </ul>
+        </li>
+        <li>Often the best approach is to just start afresh:
+            <ul>
+                <li>Good time for a clean up</li>
+                <li>New design/new IA</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="handout"></div>
+</div>
+
+
+            <div class="slide"></div>
+        </div>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108227869-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-108227869-1');
+</script>
+
+    </body>
+</html>
