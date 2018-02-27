@@ -1,0 +1,100 @@
+---
+title: "Background Images"
+date: 2017-10-13T10:23:41+01:00
+draft: false
+type: slides
+presenter: "Jonathan Fox"
+---
+
+<div class="slide">
+	<h1>CSS and Background Images</h1>
+	<p>It is possible to add a background image to an element with CSS using the <code>background-image: url(<i>url</i>)</code> property.</p>
+	<div class="handout"></div>
+</div>
+
+<div class="slide">
+	<h1>background-repeat</h1>
+	<ul>
+		<li>
+			<code>body { background-image: url(image.gif);}</code><br />
+			<a href="example1.html" target="_blank">Repeats image to fill the background</a>
+		</li>
+		<li>
+			<code>body { background-image: url(image.gif); background-repeat: repeat-x }</code><br />
+			<a href="example2.html" target="_blank">Repeats image horizontally in a single row</a>
+		</li>
+		<li>
+			<code>body { background-image: url(image.gif); background-repeat: repeat-y }</code><br />
+			<a href="example3.html" target="_blank">Repeats image vertically in a single column</a>
+		</li>
+		<li>
+			<code>body { background-image: url(image.gif); background-repeat: no-repeat }</code><br />
+			<a href="example4.html" target="_blank">Does not repeat image</a>
+		</li>
+	</ul>
+	<div class="handout"></div>
+</div>
+
+<div class="slide">
+	<h1>background-attachment</h1>
+	<ul>
+		<li>
+			<code>body { background-image: url(image.gif); background-attachment: fixed }</code><br />
+			<a href="example5.html" target="_blank">Background image does not scroll with the page's content</a>
+		</li>
+		<li>
+			<code>body { background-image: url(image.gif); background-attachment: scroll }</code><br />
+			<a href="example6.html" target="_blank">Background image scrolls with the page's content</a>
+		</li>
+	</ul>
+	<div class="handout"></div>
+</div>
+
+<div class="slide">
+	<h1>background-position</h1>
+	<p>To position a background image use the <code>background-position</code> property. Values for this property come in pairs and specify the distance from the left and top edges of the browser window. This distance can be specified as:</p>
+	<ul>
+		<li>
+			<a href="example7.html" target="_blank">A percentage of the browser window</a><br />
+			<code>body { background-image: url(image.gif); background-position: 50% 50% }</code>
+		</li>
+		<li>
+			<a href="example8.html" target="_blank">A pixel measurement</a><br />
+			<code>body { background-image: url(image.gif); background-position: 100px 100px }</code>
+		</li>
+		<li>
+			<a href="example9.html" target="_blank">A keyword (top, bottom, left, right, center)</a><br />
+			<code>body { background-image: url(image.gif); background-position: center center }</code>
+		</li>
+	</ul>
+	<div class="handout"></div>
+</div>
+
+<div class="slide">
+	<h1>background - Shorthand Property</h1>
+	<p>The shorthand property for background is simply <code>background</code>:</p>
+	<p>Example:</p>
+	<p><code>body { background:#ffffff url('img_tree.png') no-repeat right top;}</code></p>
+	<p>When using the shorthand property the order of the property values are:</p>
+	<ol>
+		<li>background-color</li>
+		<li>background-image</li>
+		<li>background-repeat</li>
+		<li>background-attachment</li>
+		<li>background-position</li>
+	</ol>
+	<p>It does not matter if one of the property values is missing, as long as the ones that are present are in this order.</p>
+	<div class="handout"></div>
+</div>
+	
+<div class="slide">
+	<h1>background - More Properties</h1>
+	<p>There are a number of other background image properties.</p>
+	<p>These include:</p>
+	<ol>
+		<li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background-origin" target="_blank">background-origin</a></li>
+		<li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_background-size" target="_blank">background-size</a></li>
+		<li><a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_background-blend-mode" target="_blank">background-blend-mode</a></li>
+	</ol>
+	<div class="handout"></div>
+</div>
