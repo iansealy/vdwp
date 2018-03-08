@@ -1,0 +1,285 @@
+---
+title: "Adding sound and video"
+date: 2017-10-25T21:50:41+01:00
+draft: false
+type: slides
+presenter: "Kieren Pitts"
+---
+
+<div class="slide">
+    <h1>Adding Sound and Video</h1>
+    <p>Sound and video can be effective, however they must be used with care.</p>
+    <p>Site owners need to consider:</p>
+    <ul>
+        <li>Primary purpose/visitor</li>
+        <li>Accessibility</li>
+        <li>Copyright</li>
+        <li>Bandwidth/file size vs Quality trade off</li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Adding Sound</h1>
+    <p>Sound is commonly distributed in one of the following formats:</p>
+    <ul>
+        <li>Wav</li>
+        <li>Real Audio</li>
+        <li>Midi - uses built in &quot;voices&quot; from your sound card</li>
+        <li>MP3 - arguably the most common audio format</li>
+        <li>FLAC - Free Lossless Audio Codec</li>
+        <li>WMA - Windows Media Audio</li>
+        <li>Ogg Vorbis - free, open, and unpatented</li>
+    </ul>
+    <p>See:</p>
+    <ul>
+        <li><a href="https://www.howtogeek.com/howto/39681/the-how-to-geek-guide-to-audio-editing-the-basics/" target="editing">Basic audio editing</a></li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+<div class="slide">
+
+    <h1>Adding sound 2</h1>
+    <p>
+    How to add sound to your pages:
+    </p>
+    <ol>
+        <li>Downloadable sound clips</li>
+        <li>Embedded sound clips</li>
+        <li>Streaming Audio (covered in streaming video)</li>
+    </ol>
+    <p>The visitor will need relevant software or a plug-in to be able to listen to the file.</p>
+
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>Downloadable Sound Clips</h1>
+    <p>HTML code for including a sound file as a downloadable link:</p>
+    <p>
+    &lt;a href=&quot;example.mp3&quot;&gt;30 seconds of Ian singing, 500K MP3 file&lt;/a&gt;
+    </p>
+
+    <ul>
+        <li>Interoperability - a standard link so it will always work</li>
+        <li>Unobtrusive - visitor isn't forced to download the file</li>
+        <li>Flexibility - you can provide several different file types</li>
+        <li>Description -  easy to give a description of the file and file size</li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>Embedded Sound Clips</h1>
+
+    <p>Embedding using the &lt;embed&gt; tag</p>
+    <p>Invalid element in HTML4/XHTML but formally introduced in HTML5</p>
+    <p><a href="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_embed" target="embedaudiohtml5">HTML5 example</a></p>
+
+    <p>If using HTML5, much better to use &lt;audio&gt;.</p>
+
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>HTML5 &lt;audio&gt;</h1>
+
+    <p>In HTML5 audio is natively supported using the &lt;audio&gt; element.</p>
+
+    <p><tt>&lt;audio src=&quot;example.ogg&quot; controls&gt;&lt;/audio&gt;</tt></p>
+
+    <p><a href="http://www.htmlgoodies.com/primers/html/article.php/3920991/HTML5-Primer-How-To-Use-the-Audio-Tag.htm" target="h5audio">Example</a></p>
+
+    <p>The mark up can also support multiple formats:</p>
+
+    <p><tt>&lt;audio&gt;<br />&lt;source src=&quot;example.mp3&quot; type='audio/mpeg; codecs=&quot;mp3&quot;'&gt;<br />&lt;source src=&quot;example.oga&quot; type='audio/ogg; codecs=&quot;vorbis&quot;'&gt;<br />&lt;p&gt;Your browser doesn't support the &lt;code&gt;audio&lt;/code&gt; element.&lt;/p&gt;<br />&lt;/audio&gt;</tt></p>
+
+    <p><a href="https://caniuse.com/#feat=audio" target="audiosupp">Good support in current browsers</a></p>
+
+    <p>The browser defines how the 'player' appears.</p>
+
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>Video delivery</h1>
+
+    <p>
+    You have two choices for making video available on the web:
+    </p>
+    <ol>
+        <li>Progressive Streaming  (HTTP - Hyper Text Transfer Protocol)</li>
+        <li>Real Time Streaming (RTSP - Real Time Streaming Protocol)</li>
+    </ol>
+
+    <p>To work with low bandwidth connections the video will lose most of its clarity and be highly compressed.</p>
+    <div class="handout">
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Progressive Streaming</h1>
+
+    <p>Normal download, not true streaming. The video is downloaded to the viewer's computer but may begin playing before download is complete.</p>
+
+    <p>It is preferable where bandwidth is likely to be low but this can be problematic for long clips due to their file size.</p>
+    <p>Common formats are:-</p>
+    <ul>
+        <li>MPEG</li>
+        <li>MP4</li>
+        <li>Ogg</li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Progressive Streaming</h1>
+    <p>Two choices:</p>
+    <ol>
+        <li>Embedded</li>
+        <li>Downloadable</li>
+    </ol>
+    <p>The visitor will need relevant software or a plug-in to be able to view the file and you should also provide a link to a source of the relevant software/plug-in.</p>
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+
+    <h1>Real Time Streaming</h1>
+    <p>Real Time Streaming Protocol (RTSP) better for long clips and on LAN or broadband/high speed environments.</p>
+    <p>Requires a streaming server (additional expense/expertise).</p>
+    <ul>
+        <li>Real Networks offers a free version of its <a href="https://www.helixcommunity.org/projects/helix-server/" target="helix">Helix server</a></li>
+        <li>Some ISPs offer a streaming server with their Web space</li>
+        <li>Use a service like <a href="http://www.youtube.com/" target="yt">YouTube</a> or <a href="http://vimeo.com/" target="vim">Vimeo</a></li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>Real Time Streaming 2</h1>
+    <p>
+    The benefits:-</p>
+    <ul>
+        <li>Don't need to download whole clip before playing</li>
+        <li>The video resides on the server (can't be downloaded <em>easily</em>)</li>
+        <li>The visitor can jump to any part of the video without having to download the preceding footage</li>
+        <li>Tries to keep pace with user's connection speed, server tries to maintain a constant connection</li>
+        <li>Video for streaming does need careful preparation</li>
+        <li>Video streaming can require greater processing power on the client machine and a good broadband connection</li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+
+<div class="slide">
+    <h1>HTML5 &lt;video&gt; element</h1>
+
+    <ul>
+        <li>HTML4/XHTML has no standards compliant way of embedding video. Virtually all video uses a plugin.</li>
+        <li>HTML5 provides the &lt;video&gt; element as a standard way to embed video.</li>
+
+        <li>No restrictions on file format or audio/video codecs:
+            <ul>
+                <li>video - H.264, Ogg Theora, VP8</li>
+                <li>audio - MP3, AAC, Ogg Vorbis</li>
+            </ul>
+        </li>
+        <li>One &lt;video&gt; element links to multiple file formats.</li>
+        <li>Browsers play the first file they can.</li>
+        <li>No single format/codec combination will be played by all browsers.</li>
+        <li><a href="http://caniuse.com/#feat=video" target="html5video">Browser support</a> is very good.</li>
+    </ul>
+
+    <p>HTML5 players</p>
+
+    <ul>
+        <li><a href="http://flowplayer.org/" target="flowplayer">Flow player</a></li>
+        <li><a href="http://www.longtailvideo.com/players/jw-flv-player/" target="jw">JW Player</a></li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
+
+
+
+<div class="slide">
+    <h1>HTML5 &lt;video&gt; element 2</h1>
+
+    <p><a href="http://www.html5rocks.com/en/tutorials/video/basics/" target="h5vid">Example</a></p>
+
+    <p>Code example:</p>
+
+    <p>
+    &lt;video width=&quot;640&quot; height=&quot;480&quot; controls&gt;<br />
+      &lt;source src=&quot;example.mp4&quot;  type='video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;'&gt;<br />
+
+      &lt;source src=&quot;example.ogg&quot;  type='video/ogg; codecs=&quot;theora, vorbis&quot;'&gt;<br />
+    &lt;/video&gt;
+    </p>
+
+    <p>YouTube uses <a href="http://youtube-global.blogspot.com/2010/01/introducing-youtube-html5-supported.html" target="youttubehtml5">H.264 HTML5 video</a>.</p>
+
+    <div class="handout">
+    </div>
+</div>
+
+<div class="slide">
+    <h1>Accessibility</h1>
+
+    <p>There are many accessibility issues associated with providing audio and video online. Some of the issues to consider include:</p>
+
+    <ul>
+
+    <li>Must provide a text alternative for all non-text content</li>
+    <li>Providing captions (subtitles for video)
+    <ul>
+        <li><a href="http://support.google.com/youtube/bin/answer.py?hl=en-GB&amp;answer=2734796" target="caption">YouTube captions</a></li>
+
+        <li><a href="https://googleblog.blogspot.co.uk/2009/11/automatic-captions-in-youtube.html" target="autocaption">YouTube automatic captions</a></li>
+    </ul>
+    </li>
+        <li>Which assistive technologies support the player you've chosen?</li>
+        <li>Does the player have keyboard controls or is it mouse only?</li>
+    </ul>
+
+    <p>In general, no single solution will be completely accessible so providing the same information in a variety of forms is recommended.</p>
+
+    <div class="handout">
+    </div>
+
+</div>
+
+<div class="slide">
+    <h1>Further Info</h1>
+
+    <ul>
+        <li><a href="http://www.w3.org/2008/06/video-notes" target="accessvid">Multimedia Accessibility FAQ</a></li>
+        <li><a href="https://www.oit.uci.edu/stream/mp4-hinting/" target="hint">Compressing and hinting media</a></li>
+        <li><a href="http://www.mediacollege.com/video/streaming/overview.html" target="mediacoll">How to create streaming video</a></li>
+        <li><a href="http://diveintohtml5.info/video.html" target="html5">Video on the Web - HTML5</a></li>
+        <li><a href="http://www.htmlgoodies.com/html5/client/how-to-embed-video-using-html5.html" target="h5how">How to embed HTML5 video</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/HTML5_video" target="goovid">HTML5 video</a></li>
+        <li><a href="http://html5doctor.com/html5-audio-the-state-of-play/" target="gooaud">HTML5 audio</a></li>
+        <li><a href="https://support.google.com/youtube/answer/171780?hl=en-GB">Embedding videos from YouTube</a></li>
+    </ul>
+    <div class="handout">
+    </div>
+</div>
