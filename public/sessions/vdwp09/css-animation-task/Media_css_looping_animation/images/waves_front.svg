@@ -1,0 +1,10 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.093 120">
+	<!--
+		This file was provided as part of a weekly web design tutorial series.
+		Sign-up for our newsletter, at http://codifydesign.com, to be notified
+		about each new episode of Creating Web Media
+	-->
+	<title>waves_front</title>
+	<path d="M121.355, 31.133C60.845, 31.3, 58.732, 47.96-1.777, 48.123c-.13, 0-.254.359-.383.359V120H243.253V48.1C184.081, 48, 181.416, 30.971, 121.355, 31.133Z" style="fill: #7cd1eb"/>
+	<path d="M121.355, 52.733C60.845, 52.9, 58.732, 69.612-1.777, 69.775c-.13, 0-.254, 1.027-.383, 1.028V120H243.253V69.789C184.081, 69.693, 181.416, 52.571, 121.355, 52.733Z" style="fill: #1bc4f4"/>
+</svg>
